@@ -16,6 +16,12 @@ variable "cluster_name" {
   default     = "project-bedrock-cluster"
 }
 
+variable "instance_types" {
+  description = "Instance types for EKS node group"
+  type        = list(string)
+  default     = ["t3.small"]
+}
+
 variable "student_id" {
   description = "Student ID for resource naming"
   type        = string

@@ -16,7 +16,7 @@ module "eks" {
       max_size     = 4
       desired_size = 2
 
-      instance_types = ["t3.medium"]
+      instance_types = var.instance_types
       capacity_type  = "ON_DEMAND"
     }
   }
@@ -49,8 +49,16 @@ module "eks" {
   }
 }
 
-# Add-on for Observability
+# CloudWatch Observability Add-on
+# NOTE: This addon can take 15-20 minutes to become active
+# If deployment times out, you can apply it separately after cluster is ready
+# Uncomment after initial cluster deployment succeeds
+
 resource "aws_eks_addon" "cloudwatch_observability" {
   cluster_name = module.eks.cluster_name
   addon_name   = "amazon-cloudwatch-observability"
+
+  tags = {
+    Project = "Bedrock"
+  }
 }
