@@ -1,13 +1,24 @@
 # GitHub Actions Setup Guide
 
-## Required Secrets
+## Step 1: Bootstrap the Terraform Backend
 
-Before the CI/CD workflow can run successfully, you must configure the following secrets in your GitHub repository:
+**The S3 backend must be created BEFORE running Terraform.** Run this locally first:
 
-### 1. Navigate to Repository Settings
-Go to: `https://github.com/Kindee18/project-bedrock/settings/secrets/actions`
+```bash
+# Ensure AWS CLI is configured with your credentials
+aws configure
 
-### 2. Add AWS Credentials
+# Run the bootstrap script to create S3 bucket and DynamoDB table
+./scripts/bootstrap-backend.sh
+```
+
+This creates:
+- S3 bucket: `bedrock-tfstate-alt-soe-025-1148` (with versioning and encryption)
+- DynamoDB table: `bedrock-terraform-lock` (for state locking)
+
+## Step 2: Add GitHub Secrets
+
+Navigate to: `https://github.com/Kindee18/project-bedrock/settings/secrets/actions`
 
 Click **"New repository secret"** and add:
 
@@ -17,27 +28,30 @@ Click **"New repository secret"** and add:
 | `AWS_SECRET_ACCESS_KEY` | Your AWS Secret Access Key |
 
 > [!IMPORTANT]
-> These credentials should have sufficient permissions to create VPC, EKS, IAM, S3, and Lambda resources.
+> These credentials should have permissions to create VPC, EKS, IAM, S3, and Lambda resources.
 
-### 3. Test the Workflow
+## Step 3: Test the Workflow
 
-After adding secrets:
+After completing Steps 1 and 2:
 1. Make a small change to any file (e.g., update README.md)
 2. Commit and push to the `main` branch
-3. Go to the **Actions** tab to see the workflow run
-
-## Backend State Management
-
-The remote backend (S3 + DynamoDB) is currently **disabled** to allow local testing.
-
-To enable remote state:
-1. Create an S3 bucket: `project-bedrock-terraform-state-[unique-suffix]`
-2. Create a DynamoDB table: `terraform-state-lock` with primary key `LockID` (String)
-3. Update `terraform/backend.tf` with your bucket name
-4. Uncomment the backend configuration
-5. Run `terraform init -migrate-state`
+3. Go to the **Actions** tab to see the workflow run successfully
 
 ## Workflow Behavior
 
 - **Pull Request**: Runs `terraform plan` to show proposed changes
 - **Push to main**: Runs `terraform apply` to deploy infrastructure
+
+## Cleanup
+
+To avoid ongoing costs, destroy infrastructure after grading:
+```bash
+cd terraform
+terraform destroy
+```
+
+To delete backend resources:
+```bash
+aws s3 rb s3://bedrock-tfstate-alt-soe-025-1148 --force
+aws dynamodb delete-table --table-name bedrock-terraform-lock --region us-east-1
+```
