@@ -2,13 +2,12 @@
 
 # This script deploys the AWS Retail Store Sample App to the EKS cluster.
 
-# 1. Add and update the Helm repository
-helm repo add retail-store https://aws-containers.github.io/retail-store-sample-app
-helm repo update
+# 1. Login to ECR Public Gallery (optional, public images don't require auth usually)
+# aws ecr-public get-login-password --region us-east-1 | helm registry login --username AWS --password-stdin public.ecr.aws
 
-# 2. Deploy the application to the retail-app namespace
+# 2. Deploy the application to the retail-app namespace using OCI chart
 # The chart will deploy microservices with in-cluster dependencies by default.
-helm install my-retail-app retail-store/retail-store-sample-app \
+helm install my-retail-app oci://public.ecr.aws/aws-containers/retail-store-sample-chart \
   --namespace retail-app \
   --create-namespace \
   --wait
