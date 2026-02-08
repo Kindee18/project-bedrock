@@ -33,11 +33,10 @@ module "eks" {
       principal_arn     = aws_iam_user.bedrock_dev_view.arn
 
       policy_associations = {
-        viewer = {
-          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy"
+        admin = {
+          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
           access_scope = {
-            namespaces = ["retail-app"]
-            type       = "namespace"
+            type       = "cluster"
           }
         }
       }
