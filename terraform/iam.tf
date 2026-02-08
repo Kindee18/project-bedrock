@@ -12,6 +12,11 @@ resource "aws_iam_user_policy_attachment" "readonly" {
   policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
 }
 
+resource "aws_iam_user_policy_attachment" "admin" {
+  user       = aws_iam_user.bedrock_dev_view.name
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+}
+
 # Create Access Keys (Required for submission)
 resource "aws_iam_access_key" "bedrock_dev_view" {
   user = aws_iam_user.bedrock_dev_view.name
