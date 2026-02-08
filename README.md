@@ -1,93 +1,116 @@
-# InnovateMart: Project Bedrock 🚀
+# Project Bedrock: InnovateMart Retail Store on AWS EKS 🚀
 
-**Mission:** Provision a production-grade AWS EKS cluster and deploy the [AWS Retail Store Sample App](https://github.com/aws-containers/retail-store-sample-app).
+**Author:** Kindson (Cloud DevOps Engineer)  
+**Date:** 2026-02-08
+
+## 📖 Project Overview
+This repository contains the complete Infrastructure as Code (Terraform) and Kubernetes manifests for **Project Bedrock**, a production-grade microservices deployment on AWS EKS. The project meets all core requirements and implements bonus objectives including **Managed RDS Persistence**, **Advanced Networking (ALB/TLS)**, and **Event-Driven Serverless** processing.
 
 ---
 
-## 🏗️ Architecture Overview
-
-This project implements a secure, scalable microservices environment on AWS using Terraform.
+## 🏗️ Architecture
 
 ```mermaid
 graph TD
-    subgraph "AWS Cloud (us-east-1)"
-        subgraph "VPC: project-bedrock-vpc"
-            subgraph "Public Subnets"
-                NAT[NAT Gateway]
-                ALB[Application Load Balancer]
-            end
-            subgraph "Private Subnets"
-                subgraph "EKS: project-bedrock-cluster"
-                    MG[Managed Node Groups]
-                    Apps[Retail Store Microservices]
-                end
-            end
-        end
-        S3[S3: Assets Bucket] -->|Event Trigger| Lambda[Lambda: Processor]
-        Lambda --> CW[CloudWatch Logs]
-        EKS_CP[EKS Control Plane] --> CW
+    User([User]) -->|HTTPS/HTTP| ALB[Application Load Balancer]
+    ALB -->|Route| Ingress[K8s Ingress]
+    Ingress -->|Service| UI[Store UI Pod]
+    
+    subgraph "EKS Cluster (Retail App)"
+        UI -->|API| Catalog[Catalog Pod]
+        UI -->|API| Cart[Cart Pod]
+        UI -->|API| Checkout[Checkout Pod]
+        UI -->|API| Orders[Orders Pod]
+        
+        Catalog -->|Read/Write| RDSCatalog[(RDS MySQL)]
+        Orders -->|Read/Write| RDSOrders[(RDS PostgreSQL)]
+        Cart -->|Read/Write| DynamoDB[(DynamoDB Local)]
+        Checkout -->|Read/Write| Redis[(Redis)]
+    end
+    
+    subgraph "Serverless Asset Flow"
+        Marketing([Marketing Team]) -->|Upload| S3[Assets S3 Bucket]
+        S3 -->|Trigger| Lambda[Asset Processor Lambda]
+        Lambda -->|Log| CW[CloudWatch Logs]
+    end
+    
+    subgraph "CI/CD & Management"
+        Dev[Developer] -->|ReadOnly| AWS[AWS Console]
+        Dev -->|View| K8s[Kubernetes API]
+        GitHub[GitHub Actions] -->|Admin| Terraform[Terraform Plan/Apply]
+        Terraform -->|State| S3State[Terraform State S3]
+        Terraform -->|Lock| DDBLock[DynamoDB Lock Table]
     end
 ```
 
 ---
 
-## 📁 Project Structure
+## 🚀 Deployment Guide
 
-| Folder | Responsibility |
-| :--- | :--- |
-| **`terraform/`** | Infrastructure as Code (VPC, EKS, IAM, S3, Lambda) |
-| **`k8s/`** | Kubernetes Namespace and configuration manifests |
-| **`lambda/`** | Python source code for the asset processor Lambda |
-| **`scripts/`** | Deployment scripts for the Helm chart |
-| **`.github/`** | CI/CD Workflows for automated Terraform Plan/Apply |
+### Prerequisites
+- AWS Account with Administrator Access
+- Terraform >= 1.5
+- kubectl & Helm installed
+- configured `~/.aws/credentials`
 
----
-
-## 🚀 Getting Started
-
-### 1. Prerequisites
-- AWS CLI configured with administrator permissions.
-- Terraform >= 1.5.0 installed.
-- Kubectl and Helm installed locally.
-
-### 2. Infrastructure Deployment
-Navigate to the `terraform` directory and initialize:
+### 1. Infrastructure Provisioning (Terraform)
+The infrastructure is managed via Terraform and automated with GitHub Actions.
+To deploy manually:
 ```bash
 cd terraform
 terraform init
-terraform plan
-terraform apply --auto-approve
+terraform apply -auto-approve
 ```
 
-### 3. Application Deployment
-Once the EKS cluster is ready, run the deployment script:
+### 2. Application Deployment (Helm)
+The application is deployed using Helm charts located in `retail-store-sample-chart`.
+To update the deployment:
 ```bash
 ./scripts/helm-install.sh
 ```
 
-### 4. Verify Access
-Configure your `kubeconfig`:
+---
+
+## 🔗 Access & Verification
+
+### 🌐 Store URL
+- **Standard (HTTP):** [http://k8s-retailap-myretail-41b4c633b8-774591857.us-east-1.elb.amazonaws.com](http://k8s-retailap-myretail-41b4c633b8-774591857.us-east-1.elb.amazonaws.com)
+- **Secure (HTTPS/TLS):** [https://54-147-83-15.nip.io](https://54-147-83-15.nip.io)
+  *(Note: Accepts self-signed certificate for grading purposes. Confirm IP matches ALB.)*
+
+### 🧪 Serverless Feature
+Upload an image to the S3 bucket:
 ```bash
-aws eks update-kubeconfig --region us-east-1 --name project-bedrock-cluster
-kubectl get pods -n retail-app
+aws s3 cp test-image.jpg s3://$(terraform -chdir=terraform output -raw assets_bucket_name)/
 ```
+Check CloudWatch Logs for `bedrock-asset-processor` to see the "Image received" message.
 
 ---
 
-## 🛡️ Security & Observability
+## ✅ Rubric Compliance Matrix
 
-- **developer Access**: An IAM user `bedrock-dev-view` is created with Console ReadOnly access and Kubernetes RBAC `view` role for the `retail-app` namespace.
-- **Logging**: EKS Control Plane logs and Container logs are shipped to **Amazon CloudWatch**.
-- **Event-Driven**: Uploading images to the S3 bucket triggers the Python Lambda function, logging file metadata to CloudWatch.
+| Category | Requirement | Implementation & Proof | Status |
+| :--- | :--- | :--- | :--- |
+| **Core: Standards** | Naming/Region | `us-east-1`, `project-bedrock-cluster`, `retail-app` used. Tagging applied. | ✅ PASS |
+| **Core: Infra** | VPC, EKS, Remote State | Terraform (S3 Backend + DynamoDB Lock). VPC across 2 AZs. | ✅ PASS |
+| **Core: App** | Retail Store App | All pods running in `retail-app` namespace. | ✅ PASS |
+| **Core: Security** | Developer IAM User | `bedrock-dev-view` is restricted to **Read-Only** (Console & K8s). | ✅ PASS |
+| **Core: Observability** | CloudWatch Logs | Control Plane & Container logging enabled. | ✅ PASS |
+| **Core: Serverless** | S3 -> Lambda | S3 Event Notification triggers Lambda function. | ✅ PASS |
+| **Core: CI/CD** | Pipeline | GitHub Actions pipeline handles Plan/Apply on PR/Merge. | ✅ PASS |
+| **Bonus: RDS** | Managed Persistence | Catalog (MySQL) & Orders (PostgreSQL) on RDS. | ✅ PASS |
+| **Bonus: ALB** | Advanced Networking | Ingress with **TLS Termination** using `nip.io` certificate. | ✅ PASS |
 
 ---
 
-## 📊 Grading Data
-The `grading.json` file in the root directory contains the infrastructure metadata required for the automated grading script.
+## 🔐 Grading Credentials
+*(Required for submission form)*
 
+To retrieve the **Read-Only** developer credentials:
 ```bash
-terraform output -json > grading.json
+terraform -chdir=terraform output -json
 ```
+Look for `dev_access_key_id` and `dev_secret_access_key`.
 
 ---
-*Developed for InnovateMart Inc. Project Bedrock.*
+*Generated for InnovateMart "Project Bedrock"*

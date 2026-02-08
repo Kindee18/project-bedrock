@@ -36,6 +36,19 @@ output "dev_secret_access_key" {
   sensitive   = true
 }
 
+# CI/CD User Credentials (For GitHub Secrets)
+output "ci_access_key_id" {
+  description = "Access Key ID for bedrock-ci (GitHub Secrets)"
+  value       = aws_iam_access_key.bedrock_ci.id
+  sensitive   = true
+}
+
+output "ci_secret_access_key" {
+  description = "Secret Access Key for bedrock-ci (GitHub Secrets)"
+  value       = aws_iam_access_key.bedrock_ci.secret
+  sensitive   = true
+}
+
 output "catalog_db_endpoint" {
   description = "Endpoint for Catalog RDS"
   value       = aws_db_instance.catalog.endpoint

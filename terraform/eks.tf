@@ -28,15 +28,29 @@ module "eks" {
   enable_cluster_creator_admin_permissions = true
 
   access_entries = {
-    developer = {
-      kubernetes_groups = ["viewers"]
-      principal_arn     = aws_iam_user.bedrock_dev_view.arn
+    ci_cd = {
+      principal_arn = aws_iam_user.bedrock_ci.arn
 
       policy_associations = {
         admin = {
           policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
           access_scope = {
             type       = "cluster"
+          }
+        }
+      }
+    }
+
+    developer = {
+      kubernetes_groups = ["viewers"]
+      principal_arn     = aws_iam_user.bedrock_dev_view.arn
+
+      policy_associations = {
+        viewer = {
+          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy"
+          access_scope = {
+            namespaces = ["retail-app"]
+            type       = "namespace"
           }
         }
       }

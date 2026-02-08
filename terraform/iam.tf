@@ -6,15 +6,25 @@ resource "aws_iam_user" "bedrock_dev_view" {
   }
 }
 
-# AWS Console Access: ReadOnlyAccess
+# CI/CD User (Admin Access)
+resource "aws_iam_user" "bedrock_ci" {
+  name = "bedrock-ci"
+  tags = { Project = "Bedrock" }
+}
+
+resource "aws_iam_user_policy_attachment" "ci_admin" {
+  user       = aws_iam_user.bedrock_ci.name
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+}
+
+resource "aws_iam_access_key" "bedrock_ci" {
+  user = aws_iam_user.bedrock_ci.name
+}
+
+# Developer View User (ReadOnly Access)
 resource "aws_iam_user_policy_attachment" "readonly" {
   user       = aws_iam_user.bedrock_dev_view.name
   policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
-}
-
-resource "aws_iam_user_policy_attachment" "admin" {
-  user       = aws_iam_user.bedrock_dev_view.name
-  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
 
 # Create Access Keys (Required for submission)
