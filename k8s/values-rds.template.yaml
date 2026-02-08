@@ -1,0 +1,32 @@
+
+catalog:
+  mysql:
+    create: false
+    endpoint: ${CATALOG_ENDPOINT}
+    secret:
+      create: true
+      username: adminuser
+      password: SuperSecretPass123!
+      name: catalog-db
+
+orders:
+  postgresql:
+    create: false
+    endpoint:
+      host: ${ORDERS_ENDPOINT}
+      port: "5432"
+    secret:
+      create: true
+      username: adminuser
+      password: SuperSecretPass123!
+      name: orders-db
+
+ui:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: alb
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+  service:
+    type: ClusterIP

@@ -35,3 +35,14 @@ output "dev_secret_access_key" {
   value       = aws_iam_access_key.bedrock_dev_view.secret
   sensitive   = true
 }
+
+output "catalog_db_endpoint" {
+  description = "Endpoint for Catalog RDS"
+  value       = aws_db_instance.catalog.endpoint
+}
+
+output "orders_db_endpoint" {
+  description = "Endpoint for Orders RDS"
+  value       = aws_db_instance.orders.endpoint
+}
+
