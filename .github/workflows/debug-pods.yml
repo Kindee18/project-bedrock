@@ -20,11 +20,9 @@ jobs:
       - name: Update Kubeconfig
         run: aws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1
 
-      - name: Get Pod Status
-        run: kubectl get pods -n retail-app
+      - name: Get UI Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
 
-      - name: Set Environment Variables (Force Fix)
-        run: kubectl set env deployment/my-retail-app-ui -n retail-app ENDPOINTS_CATALOG_URL=http://my-retail-app-catalog:80 ENDPOINTS_CARTS_URL=http://my-retail-app-carts:80 ENDPOINTS_CHECKOUT_URL=http://my-retail-app-checkout:80 ENDPOINTS_ORDERS_URL=http://my-retail-app-orders:80 ENDPOINTS_ASSETS_URL=http://my-retail-app-assets:80 --overwrite
-
-      - name: Verify Env Vars
-        run: kubectl get deployment -n retail-app my-retail-app-ui -o yaml | grep -A 20 env:
+      - name: Get UI Env Vars
+        run: kubectl list -n retail-app deployment/my-retail-app-ui
+        run: kubectl set env deployment/my-retail-app-ui -n retail-app --list
