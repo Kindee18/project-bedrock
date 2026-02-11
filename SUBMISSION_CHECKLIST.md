@@ -51,7 +51,7 @@ http://k8s-retailap-myretail-41b4c633b8-774591857.us-east-1.elb.amazonaws.com
 
 **Secure HTTPS Access (with TLS):**
 ```
-https://54-147-83-15.nip.io
+https://18-204-45-221.nip.io
 ```
 *Note: Self-signed certificate - accept security warning in browser*
 
