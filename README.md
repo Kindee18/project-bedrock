@@ -92,7 +92,7 @@ Check CloudWatch Logs for `bedrock-asset-processor` to see the "Image received" 
 | Category | Requirement | Implementation & Proof | Status |
 | :--- | :--- | :--- | :--- |
 | **Core: Standards** | Naming/Region | `us-east-1`, `project-bedrock-cluster`, `retail-app` used. Tagging applied. | ✅ PASS |
-| **Core: Infra** | VPC, EKS, Remote State | Terraform (S3 Backend + DynamoDB Lock). Cluster v1.34+. | ✅ PASS |
+| **Core: Infra** | VPC, EKS, Remote State | Terraform (S3 Backend + DynamoDB Lock). Cluster v1.33+. | ✅ PASS |
 | **Core: App** | Retail Store App | All pods running in `retail-app` namespace. | ✅ PASS |
 | **Core: Security** | Developer IAM User | `bedrock-dev-view` is restricted to **Read-Only** (Console & K8s). | ✅ PASS |
 | **Core: Observability** | CloudWatch Logs | Control Plane & Container logging enabled. | ✅ PASS |
