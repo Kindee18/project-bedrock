@@ -23,7 +23,8 @@ jobs:
       - name: Get UI Logs
         run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
 
-      - name: Get UI Env Vars
+      - name: Explore Container
         run: |
-          kubectl get deployment/my-retail-app-ui -n retail-app -o yaml
-          kubectl set env deployment/my-retail-app-ui -n retail-app --list
+          kubectl exec -n retail-app deployment/my-retail-app-ui -- ls -R /app || true
+          kubectl exec -n retail-app deployment/my-retail-app-ui -- find / -name "application.yml" || true
+          kubectl exec -n retail-app deployment/my-retail-app-ui -- find / -name "application.properties" || true
