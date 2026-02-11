@@ -20,11 +20,11 @@ jobs:
       - name: Get Pod Status
         run: kubectl get pods -n retail-app
 
-      - name: Get UI Logs
-        run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
+      - name: Get Services
+        run: kubectl get svc -n retail-app
 
-      - name: Get Catalog Logs
-        run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+      - name: Get CoreDNS Pods
+        run: kubectl get pods -n kube-system -l k8s-app=kube-dns
 
-      - name: Get Orders Logs
-        run: kubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true
+      - name: Get Catalog Pod Logs (Again)
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=20 || true
