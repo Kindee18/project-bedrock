@@ -2,6 +2,9 @@ name: Debug Pods
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/debug-pods.yml'
 
 jobs:
   debug:
@@ -21,14 +24,7 @@ jobs:
         run: kubectl get pods -n retail-app
 
       - name: Set Environment Variables (Force Fix)
-        run: |
-          kubectl set env deployment/my-retail-app-ui -n retail-app \
-            ENDPOINTS_CATALOG_URL=http://my-retail-app-catalog:80 \
-            ENDPOINTS_CARTS_URL=http://my-retail-app-carts:80 \
-            ENDPOINTS_CHECKOUT_URL=http://my-retail-app-checkout:80 \
-            ENDPOINTS_ORDERS_URL=http://my-retail-app-orders:80 \
-            ENDPOINTS_ASSETS_URL=http://my-retail-app-assets:80 \
-            --overwrite
+        run: kubectl set env deployment/my-retail-app-ui -n retail-app ENDPOINTS_CATALOG_URL=http://my-retail-app-catalog:80 ENDPOINTS_CARTS_URL=http://my-retail-app-carts:80 ENDPOINTS_CHECKOUT_URL=http://my-retail-app-checkout:80 ENDPOINTS_ORDERS_URL=http://my-retail-app-orders:80 ENDPOINTS_ASSETS_URL=http://my-retail-app-assets:80 --overwrite
 
       - name: Verify Env Vars
         run: kubectl get deployment -n retail-app my-retail-app-ui -o yaml | grep -A 20 env:
