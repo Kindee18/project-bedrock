@@ -20,11 +20,5 @@ jobs:
       - name: Get Pod Status
         run: kubectl get pods -n retail-app
 
-      - name: Get Services
-        run: kubectl get svc -n retail-app
-
-      - name: Get CoreDNS Pods
-        run: kubectl get pods -n kube-system -l k8s-app=kube-dns
-
-      - name: Get Catalog Pod Logs (Again)
-        run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=20 || true
+      - name: Get UI Deployment Yaml
+        run: kubectl get deployment -n retail-app my-retail-app-ui -o yaml
