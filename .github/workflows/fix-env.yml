@@ -2,6 +2,9 @@ name: Fix Env Vars
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-env.yml'
 
 jobs:
   patch-env:
