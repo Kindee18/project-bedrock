@@ -23,9 +23,8 @@ jobs:
       - name: Get UI Logs
         run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
 
-      - name: Curl Actuator Env
-        run: |
-          kubectl run curl-debug --image=curlimages/curl --restart=Never -- sleep 300
-          kubectl wait --for=condition=Ready pod/curl-debug -n retail-app --timeout=120s
-          kubectl exec -n retail-app curl-debug -- curl -s http://my-retail-app-ui:8080/actuator/env
-          kubectl delete pod curl-debug -n retail-app
+      - name: Get Catalog Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+
+      - name: Get Orders Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true
