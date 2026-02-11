@@ -24,5 +24,6 @@ jobs:
         run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
 
       - name: Get UI Env Vars
-        run: kubectl list -n retail-app deployment/my-retail-app-ui
-        run: kubectl set env deployment/my-retail-app-ui -n retail-app --list
+        run: |
+          kubectl get deployment/my-retail-app-ui -n retail-app -o yaml
+          kubectl set env deployment/my-retail-app-ui -n retail-app --list
