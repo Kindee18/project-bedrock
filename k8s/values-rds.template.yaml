@@ -30,3 +30,14 @@ ui:
       alb.ingress.kubernetes.io/target-type: ip
   service:
     type: ClusterIP
+  env:
+    - name: ENDPOINTS_CATALOG_URL
+      value: "http://my-retail-app-catalog:80"
+    - name: ENDPOINTS_CARTS_URL
+      value: "http://my-retail-app-carts:80"
+    - name: ENDPOINTS_CHECKOUT_URL
+      value: "http://my-retail-app-checkout:80"
+    - name: ENDPOINTS_ORDERS_URL
+      value: "http://my-retail-app-orders:80"
+    - name: ENDPOINTS_ASSETS_URL
+      value: "http://my-retail-app-assets:80"
