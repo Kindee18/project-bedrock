@@ -23,11 +23,11 @@ jobs:
       - name: Patch UI Deployment
         run: |
           kubectl set env deployment/my-retail-app-ui -n retail-app \
-            ENDPOINTS_CATALOG_URL=http://my-retail-app-catalog:80 \
-            ENDPOINTS_CARTS_URL=http://my-retail-app-carts:80 \
-            ENDPOINTS_CHECKOUT_URL=http://my-retail-app-checkout:80 \
-            ENDPOINTS_ORDERS_URL=http://my-retail-app-orders:80 \
-            ENDPOINTS_ASSETS_URL=http://my-retail-app-assets:80 \
+            ENDPOINTS_CATALOG=http://my-retail-app-catalog:80 \
+            ENDPOINTS_CARTS=http://my-retail-app-carts:80 \
+            ENDPOINTS_CHECKOUT=http://my-retail-app-checkout:80 \
+            ENDPOINTS_ORDERS=http://my-retail-app-orders:80 \
+            ENDPOINTS_ASSETS=http://my-retail-app-assets:80 \
             --overwrite
 
       - name: Restart UI
