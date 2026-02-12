@@ -1,0 +1,249 @@
+debug	UNKNOWN STEP	﻿2026-02-12T00:00:07.2447870Z Current runner version: '2.331.0'
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2484907Z ##[group]Runner Image Provisioner
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2486342Z Hosted Compute Agent
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2487273Z Version: 20260123.484
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2488241Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2489809Z Build Date: 2026-01-23T19:41:17Z
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2490991Z Worker ID: {3d3981e6-c1a0-4660-ba07-cf85637d51f9}
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2492196Z Azure Region: northcentralus
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2493287Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2495666Z ##[group]Operating System
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2496616Z Ubuntu
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2497593Z 24.04.3
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2498473Z LTS
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2499240Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2500392Z ##[group]Runner Image
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2501065Z Image: ubuntu-24.04
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2501655Z Version: 20260201.15.1
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2502844Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2504397Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2505272Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2506384Z ##[group]GITHUB_TOKEN Permissions
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2508701Z Contents: read
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2509422Z Metadata: read
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2510314Z Packages: read
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2510845Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2512976Z Secret source: Actions
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2514203Z Prepare workflow directory
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2907990Z Prepare all required actions
+debug	UNKNOWN STEP	2026-02-12T00:00:07.2965277Z Getting action download info
+debug	UNKNOWN STEP	2026-02-12T00:00:07.5906506Z Download action repository 'aws-actions/configure-aws-credentials@v2' (SHA:5fd3084fc36e372ff1fff382a39b10d03659f355)
+debug	UNKNOWN STEP	2026-02-12T00:00:08.1727732Z Complete job name: debug
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2560240Z ##[group]Run aws-actions/configure-aws-credentials@v2
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2561296Z with:
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2561833Z   aws-access-key-id: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2562476Z   aws-secret-access-key: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2562975Z   aws-region: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2563421Z   audience: sts.amazonaws.com
+debug	UNKNOWN STEP	2026-02-12T00:00:08.2564107Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:08.4720283Z (node:2127) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+debug	UNKNOWN STEP	2026-02-12T00:00:08.4721921Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:08.4722568Z Please migrate your code to use AWS SDK for JavaScript (v3).
+debug	UNKNOWN STEP	2026-02-12T00:00:08.4724249Z For more information, check the migration guide at https://a.co/7PzMCcy
+debug	UNKNOWN STEP	2026-02-12T00:00:08.4725325Z (Use `node --trace-warnings ...` to show where the warning was created)
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5793676Z ##[group]Run aws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5794948Z [36;1maws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1[0m
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5831188Z shell: /usr/bin/bash -e {0}
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5831747Z env:
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5832190Z   AWS_DEFAULT_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5832763Z   AWS_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5833382Z   AWS_ACCESS_KEY_ID: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5834052Z   AWS_SECRET_ACCESS_KEY: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:08.5834554Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:12.4440769Z Added new context arn:aws:eks:us-east-1:***:cluster/project-bedrock-cluster to /home/runner/.kube/config
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5519282Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5520238Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true[0m
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5553500Z shell: /usr/bin/bash -e {0}
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5553784Z env:
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5554012Z   AWS_DEFAULT_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5554294Z   AWS_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5554685Z   AWS_ACCESS_KEY_ID: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5555054Z   AWS_SECRET_ACCESS_KEY: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:12.5555339Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6061045Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6063706Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6065345Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6067212Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6069125Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6071433Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6073689Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6076135Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6078444Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6080624Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6082090Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6083494Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6084926Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6086398Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6088043Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6089846Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6091543Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6093361Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6095336Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6097451Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6099773Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6101887Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6103212Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6104379Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6106250Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6108095Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6109295Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6110532Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6111575Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6112699Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6113857Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6114994Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6116088Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6117194Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6118328Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6119404Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6120934Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6122128Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6123100Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6124062Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6124975Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6125871Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6126564Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6126808Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6127397Z 2026-02-12T00:00:05.230Z ERROR 1 --- [tor-tcp-epoll-2] a.w.r.e.AbstractErrorWebExceptionHandler : [d48028fa-15]  500 Server Error for HTTP GET "/"
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6127926Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6128679Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/96e961ce-47af-470a-a06a-d2016b27d31e
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6130310Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6131174Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6131596Z Error has been observed at the following site(s):
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6220098Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/96e961ce-47af-470a-a06a-d2016b27d31e [DefaultWebClient]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6221177Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6221979Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6222557Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6222883Z Original Stack Trace:
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6223588Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6224836Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6225831Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6226683Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6227664Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6228639Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6229703Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6230729Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6231812Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6232867Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6233790Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6234665Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6235449Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6236218Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6237006Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6237877Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6238778Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6239964Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6240997Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6242089Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6243248Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6244395Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6245543Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6246584Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6247737Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6248879Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6250252Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6251445Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6252524Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6253545Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6254663Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6255814Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6256962Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6258052Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6259156Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6260399Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6261482Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6262671Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6263870Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6264960Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6265942Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6266866Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6267765Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6268440Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6268803Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6293288Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6293945Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true[0m
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6324919Z shell: /usr/bin/bash -e {0}
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6325151Z env:
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6325342Z   AWS_DEFAULT_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6325582Z   AWS_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6325912Z   AWS_ACCESS_KEY_ID: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6326227Z   AWS_SECRET_ACCESS_KEY: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:16.6326444Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6109318Z 2026/02/11 21:35:54 Running database migration...
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6110133Z 2026/02/11 21:35:54 Schema migration applied
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6111068Z 2026/02/11 21:35:54 Connecting to bedrock-catalog.cuf28wk0won0.us-east-1.rds.amazonaws.com/catalog?timeout=5s
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6112204Z 2026/02/11 21:35:54 invalid connection config: missing required peer IP or hostname
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6113044Z 2026/02/11 21:35:54 Connected
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6113894Z 2026/02/11 21:35:54 Connecting to bedrock-catalog.cuf28wk0won0.us-east-1.rds.amazonaws.com/catalog?timeout=5s
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6115069Z 2026/02/11 21:35:54 invalid connection config: missing required peer IP or hostname
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6115763Z 2026/02/11 21:35:54 Connected
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6116425Z [GIN] 2026/02/11 - 23:59:20 | 200 |   20.901988ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6117432Z [GIN] 2026/02/11 - 23:59:20 | 200 |   25.021533ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6118540Z [GIN] 2026/02/11 - 23:59:20 | 200 |   19.018885ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6119833Z [GIN] 2026/02/11 - 23:59:20 | 200 |   18.191194ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6121700Z [GIN] 2026/02/11 - 23:59:25 | 200 |     926.015µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6123018Z [GIN] 2026/02/11 - 23:59:25 | 200 |     917.666µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6124038Z [GIN] 2026/02/11 - 23:59:35 | 200 |    1.199054ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6125157Z [GIN] 2026/02/11 - 23:59:35 | 200 |     742.672µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6126304Z [GIN] 2026/02/11 - 23:59:35 | 200 |     954.993µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6127354Z [GIN] 2026/02/11 - 23:59:35 | 200 |    1.140203ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6128500Z [GIN] 2026/02/11 - 23:59:50 | 200 |     985.058µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6129793Z [GIN] 2026/02/11 - 23:59:50 | 200 |    1.138649ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6130827Z [GIN] 2026/02/11 - 23:59:50 | 200 |    1.051583ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6131941Z [GIN] 2026/02/11 - 23:59:50 | 200 |     984.597µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6132928Z [GIN] 2026/02/12 - 00:00:05 | 200 |    4.055593ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6133883Z [GIN] 2026/02/12 - 00:00:05 | 200 |    5.609201ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6134836Z [GIN] 2026/02/12 - 00:00:05 | 200 |    4.063354ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6135820Z [GIN] 2026/02/12 - 00:00:05 | 200 |    2.886121ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6174490Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6175144Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true[0m
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6206755Z shell: /usr/bin/bash -e {0}
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6207001Z env:
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6207224Z   AWS_DEFAULT_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6207452Z   AWS_REGION: us-east-1
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6207779Z   AWS_ACCESS_KEY_ID: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6208095Z   AWS_SECRET_ACCESS_KEY: ***
+debug	UNKNOWN STEP	2026-02-12T00:00:17.6208312Z ##[endgroup]
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5252352Z Picked up JAVA_TOOL_OPTIONS: -javaagent:/opt/aws-opentelemetry-agent.jar
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5253732Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5255521Z [otel.javaagent 2026-02-11 21:30:07:144 +0000] [main] INFO io.opentelemetry.javaagent.tooling.VersionLogger - opentelemetry-javaagent - version: 1.24.0-aws
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5257346Z Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5258352Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5258508Z   .   ____          _            __ _ _
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5258939Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5259373Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5260031Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5260480Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5260908Z  =========|_|==============|___/=/_/_/_/
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5265373Z  :: Spring Boot ::                (v3.2.5)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5265727Z 
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5266791Z 2026-02-11T21:30:10.048Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : Starting OrdersApplication v0.0.1-SNAPSHOT using Java 17.0.13 with PID 1 (/app/app.jar started by appuser in /app)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5268751Z 2026-02-11T21:30:10.083Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : No active profile set, falling back to 1 default profile: "default"
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5270654Z 2026-02-11T21:30:12.997Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5272462Z 2026-02-11T21:30:13.081Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JDBC repository interface.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5274138Z 2026-02-11T21:30:14.144Z  INFO 1 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5275403Z 2026-02-11T21:30:14.166Z  INFO 1 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5276736Z 2026-02-11T21:30:14.167Z  INFO 1 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5278101Z 2026-02-11T21:30:14.261Z  INFO 1 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5279876Z 2026-02-11T21:30:14.267Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3374 ms
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5281696Z Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5283269Z 2026-02-11T21:30:15.081Z  INFO 1 --- [           main] c.a.s.o.c.m.RabbitMQMessagingConfig      : Creating RabbitMQ messaging provider
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5284573Z 2026-02-11T21:30:15.275Z  INFO 1 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5286476Z 2026-02-11T21:30:15.714Z  INFO 1 --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ea2f72e
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5288029Z 2026-02-11T21:30:15.717Z  INFO 1 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5289735Z 2026-02-11T21:30:15.881Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.22.3 by Redgate
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5290611Z 2026-02-11T21:30:15.883Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : See release notes here: https://rd.gt/416ObMi
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5291323Z 2026-02-11T21:30:15.884Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : 
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5292532Z 2026-02-11T21:30:15.941Z  INFO 1 --- [           main] o.f.c.FlywayExecutor                     : Database: jdbc:postgresql://bedrock-orders.cuf28wk0won0.us-east-1.rds.amazonaws.com:5432/orders (PostgreSQL 16.3)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5294897Z 2026-02-11T21:30:15.960Z  WARN 1 --- [           main] o.f.c.i.d.b.Database                     : Flyway upgrade recommended: PostgreSQL 16.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5296225Z 2026-02-11T21:30:16.055Z  INFO 1 --- [           main] o.f.c.i.c.DbValidate                     : Successfully validated 1 migration (execution time 00:00.076s)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5297042Z 2026-02-11T21:30:16.107Z  INFO 1 --- [           main] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 1
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5297822Z 2026-02-11T21:30:16.113Z  INFO 1 --- [           main] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5298678Z 2026-02-11T21:30:18.187Z  INFO 1 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5299821Z 2026-02-11T21:30:18.356Z  INFO 1 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5300801Z 2026-02-11T21:30:18.394Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : Started OrdersApplication in 9.46 seconds (process running for 11.598)
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5301748Z 2026-02-11T21:30:51.845Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5302637Z 2026-02-11T21:30:51.845Z  INFO 1 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5303453Z 2026-02-11T21:30:51.848Z  INFO 1 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5436505Z Post job cleanup.
+debug	UNKNOWN STEP	2026-02-12T00:00:18.5833673Z Cleaning up orphan processes

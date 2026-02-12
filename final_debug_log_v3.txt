@@ -1,0 +1,832 @@
+debug	Set up job	﻿2026-02-12T01:37:50.9210387Z Current runner version: '2.331.0'
+debug	Set up job	2026-02-12T01:37:50.9243693Z ##[group]Runner Image Provisioner
+debug	Set up job	2026-02-12T01:37:50.9245025Z Hosted Compute Agent
+debug	Set up job	2026-02-12T01:37:50.9245883Z Version: 20260123.484
+debug	Set up job	2026-02-12T01:37:50.9246887Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+debug	Set up job	2026-02-12T01:37:50.9247974Z Build Date: 2026-01-23T19:41:17Z
+debug	Set up job	2026-02-12T01:37:50.9248986Z Worker ID: {c9d30ab8-66a4-4d85-a72f-bdf43c4d5b7d}
+debug	Set up job	2026-02-12T01:37:50.9250155Z Azure Region: northcentralus
+debug	Set up job	2026-02-12T01:37:50.9251034Z ##[endgroup]
+debug	Set up job	2026-02-12T01:37:50.9253455Z ##[group]Operating System
+debug	Set up job	2026-02-12T01:37:50.9254686Z Ubuntu
+debug	Set up job	2026-02-12T01:37:50.9255587Z 24.04.3
+debug	Set up job	2026-02-12T01:37:50.9256386Z LTS
+debug	Set up job	2026-02-12T01:37:50.9257271Z ##[endgroup]
+debug	Set up job	2026-02-12T01:37:50.9258151Z ##[group]Runner Image
+debug	Set up job	2026-02-12T01:37:50.9259061Z Image: ubuntu-24.04
+debug	Set up job	2026-02-12T01:37:50.9260079Z Version: 20260201.15.1
+debug	Set up job	2026-02-12T01:37:50.9261820Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+debug	Set up job	2026-02-12T01:37:50.9264797Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+debug	Set up job	2026-02-12T01:37:50.9266507Z ##[endgroup]
+debug	Set up job	2026-02-12T01:37:50.9268531Z ##[group]GITHUB_TOKEN Permissions
+debug	Set up job	2026-02-12T01:37:50.9271245Z Contents: read
+debug	Set up job	2026-02-12T01:37:50.9272189Z Metadata: read
+debug	Set up job	2026-02-12T01:37:50.9273204Z Packages: read
+debug	Set up job	2026-02-12T01:37:50.9274273Z ##[endgroup]
+debug	Set up job	2026-02-12T01:37:50.9277431Z Secret source: Actions
+debug	Set up job	2026-02-12T01:37:50.9278946Z Prepare workflow directory
+debug	Set up job	2026-02-12T01:37:50.9665459Z Prepare all required actions
+debug	Set up job	2026-02-12T01:37:50.9719622Z Getting action download info
+debug	Set up job	2026-02-12T01:37:51.2637070Z Download action repository 'aws-actions/configure-aws-credentials@v2' (SHA:5fd3084fc36e372ff1fff382a39b10d03659f355)
+debug	Set up job	2026-02-12T01:37:51.8484481Z Complete job name: debug
+debug	Configure AWS credentials	﻿2026-02-12T01:37:51.9354029Z ##[group]Run aws-actions/configure-aws-credentials@v2
+debug	Configure AWS credentials	2026-02-12T01:37:51.9355401Z with:
+debug	Configure AWS credentials	2026-02-12T01:37:51.9355994Z   aws-access-key-id: ***
+debug	Configure AWS credentials	2026-02-12T01:37:51.9356684Z   aws-secret-access-key: ***
+debug	Configure AWS credentials	2026-02-12T01:37:51.9357212Z   aws-region: us-east-1
+debug	Configure AWS credentials	2026-02-12T01:37:51.9357689Z   audience: sts.amazonaws.com
+debug	Configure AWS credentials	2026-02-12T01:37:51.9358428Z ##[endgroup]
+debug	Configure AWS credentials	2026-02-12T01:37:52.1496170Z (node:2054) NOTE: We are formalizing our plans to enter AWS SDK for JavaScript (v2) into maintenance mode in 2023.
+debug	Configure AWS credentials	2026-02-12T01:37:52.1497808Z 
+debug	Configure AWS credentials	2026-02-12T01:37:52.1498484Z Please migrate your code to use AWS SDK for JavaScript (v3).
+debug	Configure AWS credentials	2026-02-12T01:37:52.1500214Z For more information, check the migration guide at https://a.co/7PzMCcy
+debug	Configure AWS credentials	2026-02-12T01:37:52.1502077Z (Use `node --trace-warnings ...` to show where the warning was created)
+debug	Update Kubeconfig	﻿2026-02-12T01:37:52.3039554Z ##[group]Run aws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1
+debug	Update Kubeconfig	2026-02-12T01:37:52.3040812Z [36;1maws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1[0m
+debug	Update Kubeconfig	2026-02-12T01:37:52.3076476Z shell: /usr/bin/bash -e {0}
+debug	Update Kubeconfig	2026-02-12T01:37:52.3077049Z env:
+debug	Update Kubeconfig	2026-02-12T01:37:52.3077478Z   AWS_DEFAULT_REGION: us-east-1
+debug	Update Kubeconfig	2026-02-12T01:37:52.3078019Z   AWS_REGION: us-east-1
+debug	Update Kubeconfig	2026-02-12T01:37:52.3078633Z   AWS_ACCESS_KEY_ID: ***
+debug	Update Kubeconfig	2026-02-12T01:37:52.3079309Z   AWS_SECRET_ACCESS_KEY: ***
+debug	Update Kubeconfig	2026-02-12T01:37:52.3079817Z ##[endgroup]
+debug	Update Kubeconfig	2026-02-12T01:37:55.4959898Z Added new context arn:aws:eks:us-east-1:***:cluster/project-bedrock-cluster to /home/runner/.kube/config
+debug	Get UI Logs	﻿2026-02-12T01:37:55.5783293Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=500 || true
+debug	Get UI Logs	2026-02-12T01:37:55.5783998Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=500 || true[0m
+debug	Get UI Logs	2026-02-12T01:37:55.5818395Z shell: /usr/bin/bash -e {0}
+debug	Get UI Logs	2026-02-12T01:37:55.5818695Z env:
+debug	Get UI Logs	2026-02-12T01:37:55.5818937Z   AWS_DEFAULT_REGION: us-east-1
+debug	Get UI Logs	2026-02-12T01:37:55.5819227Z   AWS_REGION: us-east-1
+debug	Get UI Logs	2026-02-12T01:37:55.5819654Z   AWS_ACCESS_KEY_ID: ***
+debug	Get UI Logs	2026-02-12T01:37:55.5820034Z   AWS_SECRET_ACCESS_KEY: ***
+debug	Get UI Logs	2026-02-12T01:37:55.5820315Z ##[endgroup]
+debug	Get UI Logs	2026-02-12T01:37:58.8661410Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.8664029Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.8759545Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/f07e6903-e386-426a-b4fe-9eebfa1a4537 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.8760668Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8761555Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.8762149Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8762484Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.8763236Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8764834Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8765906Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8766783Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8767793Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8768821Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8769822Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8770852Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8771962Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8773052Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8774006Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8775038Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8775850Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8776650Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8777468Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8778390Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8779323Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8780513Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8781549Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8782684Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8783900Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8785427Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8786540Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8787674Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8788876Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8790075Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8791467Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8792833Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8793942Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8795199Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8796462Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8797756Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8799042Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8800268Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8801552Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8802848Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8804061Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8805744Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8807071Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8808318Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8809412Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8810451Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8811511Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8812348Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.8812583Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8813122Z 2026-02-12T01:37:09.991Z ERROR 1 --- [tor-tcp-epoll-2] a.w.r.e.AbstractErrorWebExceptionHandler : [cb5fb64e-2740]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.8813661Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8814650Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/ef46dda3-d6ca-47d3-a5e5-5a3cf7be7a48
+debug	Get UI Logs	2026-02-12T01:37:58.8816181Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8817126Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.8817592Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.8818409Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/ef46dda3-d6ca-47d3-a5e5-5a3cf7be7a48 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.8819388Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8820173Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.8820759Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8821102Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.8821924Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8823309Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8824504Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8825450Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8826540Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8827615Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8828660Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8829849Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8831021Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8832167Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8833165Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8834049Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8835391Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8836864Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8838010Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8839825Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8841987Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8843873Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8846061Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8847365Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8848659Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8849922Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8851059Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8852212Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8853481Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8854981Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8856370Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8857667Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8858741Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8859880Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8861110Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8862375Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8863627Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8865006Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8866221Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8867692Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8868900Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8870219Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8871675Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8872747Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8874516Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8876039Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8877037Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8877757Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.8878000Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8878516Z 2026-02-12T01:37:10.067Z ERROR 1 --- [tor-tcp-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [313648e4-2741]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.8879075Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8879907Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/8f9d1a5e-68c6-40d8-b1c6-2f6f4a7f25c8
+debug	Get UI Logs	2026-02-12T01:37:58.8881400Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8882330Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.8882783Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.8883592Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/8f9d1a5e-68c6-40d8-b1c6-2f6f4a7f25c8 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.8884768Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8885570Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.8886142Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8886473Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.8887277Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8888669Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8889755Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8890707Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8891783Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8892849Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8893876Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8895329Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8896507Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8897649Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8898775Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8899669Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8900523Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8901375Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8902250Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8903228Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8904455Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8905607Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8906717Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8908162Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8909661Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8911057Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8912197Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8913354Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8914778Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8916045Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8917427Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8918721Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8919806Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8921138Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8922554Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8923835Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8925240Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8926463Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8927813Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8929077Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8930277Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8931754Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8933648Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8934899Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8935968Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8936983Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8937975Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8938775Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.8939010Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8939534Z 2026-02-12T01:37:25.002Z ERROR 1 --- [tor-tcp-epoll-4] a.w.r.e.AbstractErrorWebExceptionHandler : [98a2ced5-2747]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.8940070Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8940903Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/2b97c161-891b-41ce-b00c-0afb72352def
+debug	Get UI Logs	2026-02-12T01:37:58.8942381Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8943314Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.8943775Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.8944706Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/2b97c161-891b-41ce-b00c-0afb72352def [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.8945694Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8946476Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.8947052Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.8947385Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.8948185Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8949714Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.8950798Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8951716Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8952779Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8953946Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8955098Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8956187Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8957355Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8958487Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8959493Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8960386Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8961242Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8962090Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.8962962Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8963936Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8965034Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8966048Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8967137Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.8968322Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8969602Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8970860Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8971992Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8973139Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8974542Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8975799Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8977310Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8978598Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8979676Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8980914Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8982158Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8983437Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8984812Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8986023Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8987242Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8988518Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8989704Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8991050Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8992335Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8993408Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8994597Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8995608Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8996607Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.8997325Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.8997562Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8998077Z 2026-02-12T01:37:25.083Z ERROR 1 --- [tor-tcp-epoll-1] a.w.r.e.AbstractErrorWebExceptionHandler : [894de94a-2748]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.8998616Z 
+debug	Get UI Logs	2026-02-12T01:37:58.8999444Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/50a06db1-91ee-42c0-8f87-e1a4a530c39d
+debug	Get UI Logs	2026-02-12T01:37:58.9000914Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9001848Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.9002466Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.9003247Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/50a06db1-91ee-42c0-8f87-e1a4a530c39d [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.9004314Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9005097Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.9005668Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9006004Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.9006936Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9008297Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9009409Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9010325Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9011379Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9012438Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9013472Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9014648Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9015813Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9016956Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9017942Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9018826Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9019672Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9020518Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9021388Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9022356Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9023340Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9024445Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9025534Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9026733Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9028015Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9029396Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9030533Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9031687Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9032956Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9034426Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9035821Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9037116Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9038195Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9039324Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9040567Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9041848Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9043116Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9044413Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9045637Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9047001Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9048203Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9049531Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9050843Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9051928Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9053013Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9054032Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9055125Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9055977Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.9056212Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9056744Z 2026-02-12T01:37:40.006Z ERROR 1 --- [tor-tcp-epoll-2] a.w.r.e.AbstractErrorWebExceptionHandler : [5b7c682f-2754]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.9057277Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9058190Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/7f2da6b4-2eb4-451e-8be9-5562e85d0970
+debug	Get UI Logs	2026-02-12T01:37:58.9059675Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9060760Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.9061216Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.9061982Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/7f2da6b4-2eb4-451e-8be9-5562e85d0970 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.9062963Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9063742Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.9064427Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9064763Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.9065551Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9066931Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9068013Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9068936Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9070007Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9071061Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9072091Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9073178Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9074441Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9075574Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9076583Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9077460Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9078311Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9079159Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9080038Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9081008Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9082121Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9083136Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9084328Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9085528Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9086925Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9088191Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9089328Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9090486Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9091793Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9093067Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9094559Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9095871Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9096950Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9098089Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9099332Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9100615Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9101871Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9103090Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9104399Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9105658Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9106847Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9108167Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9109591Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9110669Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9111733Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9112741Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9114712Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9115886Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.9116310Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9117114Z 2026-02-12T01:37:40.098Z ERROR 1 --- [tor-tcp-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [2d854575-2755]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.9118013Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9119484Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/f93f9589-5134-41ad-9d06-99395c0f0940
+debug	Get UI Logs	2026-02-12T01:37:58.9122194Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9123949Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.9124973Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.9126446Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/f93f9589-5134-41ad-9d06-99395c0f0940 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.9128285Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9129781Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.9130524Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9191949Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.9192928Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9194597Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9195732Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9196645Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9197722Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9198775Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9199788Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9200858Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9202017Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9203154Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9204276Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9205374Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9206214Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9207050Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9207903Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9209013Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9209988Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9211002Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9212093Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9213294Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9214961Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9216231Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9217363Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9218511Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9219774Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9221019Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9222382Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9223663Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9224980Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9226124Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9227348Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9228613Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9229862Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9231050Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9232439Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9233697Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9235011Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9236433Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9237723Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9238794Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9239858Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9240864Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9241845Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9242566Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.9242801Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9243326Z 2026-02-12T01:37:55.019Z ERROR 1 --- [tor-tcp-epoll-4] a.w.r.e.AbstractErrorWebExceptionHandler : [b0bc0549-2761]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.9243862Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9244788Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/bd5f89ca-d534-49f0-8cdf-fc79885128ad
+debug	Get UI Logs	2026-02-12T01:37:58.9246270Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9247194Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.9247643Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.9248466Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/bd5f89ca-d534-49f0-8cdf-fc79885128ad [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.9249450Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9250230Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.9250801Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9251129Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.9251923Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9253277Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9254618Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9255558Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9256629Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9257685Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9258867Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9259936Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9261102Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9262360Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9263353Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9264340Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9265198Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9266029Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9266892Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9267855Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9268834Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9269845Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9270933Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9272119Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9273389Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9274767Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9275905Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9277055Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9278315Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9279568Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9280937Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9282224Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9283304Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9284659Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9285886Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9287156Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9288410Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9289711Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9290945Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9292219Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9293403Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9294960Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9296266Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9297335Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9298414Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9299417Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9300400Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9301101Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.9301339Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9301853Z 2026-02-12T01:37:55.114Z ERROR 1 --- [tor-tcp-epoll-1] a.w.r.e.AbstractErrorWebExceptionHandler : [029a8e8d-2762]  500 Server Error for HTTP GET "/"
+debug	Get UI Logs	2026-02-12T01:37:58.9302396Z 
+debug	Get UI Logs	2026-02-12T01:37:58.9303216Z org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from GET http://my-retail-app-carts:80/carts/fd35f362-5ee6-490f-b416-837ac77a43c5
+debug	Get UI Logs	2026-02-12T01:37:58.9304794Z 	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9305722Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+debug	Get UI Logs	2026-02-12T01:37:58.9306172Z Error has been observed at the following site(s):
+debug	Get UI Logs	2026-02-12T01:37:58.9306939Z 	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from GET http://my-retail-app-carts:80/carts/fd35f362-5ee6-490f-b416-837ac77a43c5 [DefaultWebClient]
+debug	Get UI Logs	2026-02-12T01:37:58.9307904Z 	*__checkpoint ⇢ Handler com.amazon.sample.ui.web.HomeController#index(Model, ServerHttpRequest) [DispatcherHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9308682Z 	*__checkpoint ⇢ com.amazon.sample.ui.web.util.SessionIDWebFilter [DefaultWebFilterChain]
+debug	Get UI Logs	2026-02-12T01:37:58.9309239Z 	*__checkpoint ⇢ HTTP GET "/" [ExceptionHandlingWebHandler]
+debug	Get UI Logs	2026-02-12T01:37:58.9309568Z Original Stack Trace:
+debug	Get UI Logs	2026-02-12T01:37:58.9310353Z 		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:332) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9311851Z 		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.14.jar!/:6.1.14]
+debug	Get UI Logs	2026-02-12T01:37:58.9312922Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9313830Z 		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9315129Z 		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9316175Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9317203Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9318283Z 		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9320060Z 		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9321395Z 		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9322414Z 		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9323459Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9324971Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9325880Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) [reactor-core-3.6.11.jar!/:3.6.11]
+debug	Get UI Logs	2026-02-12T01:37:58.9326760Z 		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9327730Z 		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:445) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9328699Z 		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:499) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9329791Z 		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:800) [reactor-netty-http-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9330883Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) [reactor-netty-core-1.1.23.jar!/:1.1.23]
+debug	Get UI Logs	2026-02-12T01:37:58.9332077Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9333356Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9334882Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9336012Z 		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) [netty-handler-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9337168Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9338438Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9339869Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9341250Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9342543Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9343749Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) [netty-codec-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9345001Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9346244Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9347511Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9348758Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9349953Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9351166Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9352419Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9353594Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) [netty-transport-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9355018Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9356308Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9357389Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) [netty-transport-classes-epoll-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9358446Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9359451Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9360431Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.114.Final.jar!/:4.1.114.Final]
+debug	Get UI Logs	2026-02-12T01:37:58.9361144Z 		at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get UI Logs	2026-02-12T01:37:58.9361376Z 
+debug	Get Catalog Logs	﻿2026-02-12T01:37:58.9386202Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+debug	Get Catalog Logs	2026-02-12T01:37:58.9386884Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true[0m
+debug	Get Catalog Logs	2026-02-12T01:37:58.9417728Z shell: /usr/bin/bash -e {0}
+debug	Get Catalog Logs	2026-02-12T01:37:58.9417979Z env:
+debug	Get Catalog Logs	2026-02-12T01:37:58.9418167Z   AWS_DEFAULT_REGION: us-east-1
+debug	Get Catalog Logs	2026-02-12T01:37:58.9418409Z   AWS_REGION: us-east-1
+debug	Get Catalog Logs	2026-02-12T01:37:58.9418779Z   AWS_ACCESS_KEY_ID: ***
+debug	Get Catalog Logs	2026-02-12T01:37:58.9419104Z   AWS_SECRET_ACCESS_KEY: ***
+debug	Get Catalog Logs	2026-02-12T01:37:58.9419332Z ##[endgroup]
+debug	Get Catalog Logs	2026-02-12T01:37:59.8479984Z [GIN] 2026/02/12 - 01:31:54 | 200 |     817.959µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8480958Z [GIN] 2026/02/12 - 01:31:54 | 200 |     896.968µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8481618Z [GIN] 2026/02/12 - 01:32:09 | 200 |     849.103µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8482241Z [GIN] 2026/02/12 - 01:32:09 | 200 |    1.005392ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8482888Z [GIN] 2026/02/12 - 01:32:09 | 200 |      924.05µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8484450Z [GIN] 2026/02/12 - 01:32:09 | 200 |     895.156µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8485661Z [GIN] 2026/02/12 - 01:32:24 | 200 |     860.569µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8486796Z [GIN] 2026/02/12 - 01:32:24 | 200 |    1.022736ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8487517Z [GIN] 2026/02/12 - 01:32:24 | 200 |    1.344271ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8488079Z [GIN] 2026/02/12 - 01:32:24 | 200 |    1.458063ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8488750Z [GIN] 2026/02/12 - 01:32:39 | 200 |     819.809µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8489326Z [GIN] 2026/02/12 - 01:32:39 | 200 |    1.014784ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8489978Z [GIN] 2026/02/12 - 01:32:39 | 200 |     906.547µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8490531Z [GIN] 2026/02/12 - 01:32:39 | 200 |    1.042741ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8491162Z [GIN] 2026/02/12 - 01:32:54 | 200 |     881.902µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8491773Z [GIN] 2026/02/12 - 01:32:54 | 200 |      869.97µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8492395Z [GIN] 2026/02/12 - 01:32:54 | 200 |      800.53µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8492958Z [GIN] 2026/02/12 - 01:32:54 | 200 |    1.127973ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8493519Z [GIN] 2026/02/12 - 01:33:09 | 200 |     1.08698ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8494253Z [GIN] 2026/02/12 - 01:33:09 | 200 |    2.336861ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8494911Z [GIN] 2026/02/12 - 01:33:09 | 200 |     863.186µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8495434Z [GIN] 2026/02/12 - 01:33:09 | 200 |    1.016145ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8495966Z [GIN] 2026/02/12 - 01:33:24 | 200 |     1.32715ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8496564Z [GIN] 2026/02/12 - 01:33:24 | 200 |      944.06µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8497164Z [GIN] 2026/02/12 - 01:33:24 | 200 |     961.159µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8497986Z [GIN] 2026/02/12 - 01:33:24 | 200 |    1.092537ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8498602Z [GIN] 2026/02/12 - 01:33:39 | 200 |     886.672µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8499135Z [GIN] 2026/02/12 - 01:33:39 | 200 |    1.171246ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8499763Z [GIN] 2026/02/12 - 01:33:39 | 200 |      842.17µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8500313Z [GIN] 2026/02/12 - 01:33:39 | 200 |    1.257538ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8500808Z [GIN] 2026/02/12 - 01:33:54 | 200 |    1.107265ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8501339Z [GIN] 2026/02/12 - 01:33:54 | 200 |    1.165967ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8501980Z [GIN] 2026/02/12 - 01:33:54 | 200 |     947.252µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8502512Z [GIN] 2026/02/12 - 01:33:54 | 200 |    1.135223ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8503262Z [GIN] 2026/02/12 - 01:34:09 | 200 |     874.645µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8503796Z [GIN] 2026/02/12 - 01:34:09 | 200 |    1.058857ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8504616Z [GIN] 2026/02/12 - 01:34:09 | 200 |     832.145µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8505211Z [GIN] 2026/02/12 - 01:34:09 | 200 |     936.419µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8505816Z [GIN] 2026/02/12 - 01:34:24 | 200 |     961.658µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8506339Z [GIN] 2026/02/12 - 01:34:24 | 200 |     1.02365ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8506844Z [GIN] 2026/02/12 - 01:34:24 | 200 |    1.049236ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8507459Z [GIN] 2026/02/12 - 01:34:24 | 200 |     553.259µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8508087Z [GIN] 2026/02/12 - 01:34:39 | 200 |     859.595µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8508609Z [GIN] 2026/02/12 - 01:34:39 | 200 |    1.000552ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8509220Z [GIN] 2026/02/12 - 01:34:39 | 200 |     979.571µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8509745Z [GIN] 2026/02/12 - 01:34:39 | 200 |    1.184232ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8510276Z [GIN] 2026/02/12 - 01:34:54 | 200 |    1.068632ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8510879Z [GIN] 2026/02/12 - 01:34:54 | 200 |     942.633µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8511483Z [GIN] 2026/02/12 - 01:34:54 | 200 |     956.176µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8512082Z [GIN] 2026/02/12 - 01:34:54 | 200 |     866.904µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8513106Z [GIN] 2026/02/12 - 01:35:09 | 200 |     864.586µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8514037Z [GIN] 2026/02/12 - 01:35:09 | 200 |     1.02499ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8515292Z [GIN] 2026/02/12 - 01:35:09 | 200 |     868.097µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8516354Z [GIN] 2026/02/12 - 01:35:09 | 200 |       978.7µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8517296Z [GIN] 2026/02/12 - 01:35:24 | 200 |     934.117µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8518046Z [GIN] 2026/02/12 - 01:35:24 | 200 |    1.120381ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8518677Z [GIN] 2026/02/12 - 01:35:24 | 200 |     842.488µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8519269Z [GIN] 2026/02/12 - 01:35:24 | 200 |     976.018µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8519789Z [GIN] 2026/02/12 - 01:35:39 | 200 |    1.100887ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8520318Z [GIN] 2026/02/12 - 01:35:39 | 200 |    1.165063ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8520927Z [GIN] 2026/02/12 - 01:35:39 | 200 |     923.424µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8521517Z [GIN] 2026/02/12 - 01:35:39 | 200 |     824.887µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8522124Z [GIN] 2026/02/12 - 01:35:54 | 200 |     841.252µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8522833Z [GIN] 2026/02/12 - 01:35:54 | 200 |     972.982µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8523434Z [GIN] 2026/02/12 - 01:35:55 | 200 |     954.274µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8524287Z [GIN] 2026/02/12 - 01:35:55 | 200 |     865.476µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8525043Z [GIN] 2026/02/12 - 01:36:05 | 200 |     952.166µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8525570Z [GIN] 2026/02/12 - 01:36:05 | 200 |    1.330159ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8526176Z [GIN] 2026/02/12 - 01:36:09 | 200 |     848.229µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8526779Z [GIN] 2026/02/12 - 01:36:09 | 200 |     911.926µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8527383Z [GIN] 2026/02/12 - 01:36:10 | 200 |     921.396µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8527912Z [GIN] 2026/02/12 - 01:36:10 | 200 |    1.118163ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8528517Z [GIN] 2026/02/12 - 01:36:24 | 200 |     812.747µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8529100Z [GIN] 2026/02/12 - 01:36:24 | 200 |      970.51µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8529699Z [GIN] 2026/02/12 - 01:36:25 | 200 |     811.899µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8530286Z [GIN] 2026/02/12 - 01:36:25 | 200 |      984.27µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8530886Z [GIN] 2026/02/12 - 01:36:39 | 200 |     860.117µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8531418Z [GIN] 2026/02/12 - 01:36:39 | 200 |    1.092818ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8531912Z [GIN] 2026/02/12 - 01:36:40 | 200 |    1.095312ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8532519Z [GIN] 2026/02/12 - 01:36:40 | 200 |     792.031µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8533155Z [GIN] 2026/02/12 - 01:36:54 | 200 |     961.686µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8533744Z [GIN] 2026/02/12 - 01:36:54 | 200 |     921.659µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8534570Z [GIN] 2026/02/12 - 01:36:55 | 200 |      987.34µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8535125Z [GIN] 2026/02/12 - 01:36:55 | 200 |    1.433705ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8535907Z [GIN] 2026/02/12 - 01:37:09 | 200 |     912.139µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8536521Z [GIN] 2026/02/12 - 01:37:09 | 200 |     993.268µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8537133Z [GIN] 2026/02/12 - 01:37:10 | 200 |     860.568µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8537662Z [GIN] 2026/02/12 - 01:37:10 | 200 |    1.052782ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8538218Z [GIN] 2026/02/12 - 01:37:24 | 200 |    1.109425ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8538757Z [GIN] 2026/02/12 - 01:37:24 | 200 |    1.165206ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8539375Z [GIN] 2026/02/12 - 01:37:25 | 200 |     853.384µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8539911Z [GIN] 2026/02/12 - 01:37:25 | 200 |    1.022429ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8540445Z [GIN] 2026/02/12 - 01:37:39 | 200 |     1.03853ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8541090Z [GIN] 2026/02/12 - 01:37:39 | 200 |    1.247783ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8541657Z [GIN] 2026/02/12 - 01:37:40 | 200 |     923.847µs |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8542259Z [GIN] 2026/02/12 - 01:37:40 | 200 |     983.605µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8542897Z [GIN] 2026/02/12 - 01:37:55 | 200 |     892.205µs |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Catalog Logs	2026-02-12T01:37:59.8543423Z [GIN] 2026/02/12 - 01:37:55 | 200 |    1.391789ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8543920Z [GIN] 2026/02/12 - 01:37:55 | 200 |    1.127777ms |      10.0.2.139 | GET      "/catalogue/size?tags="
+debug	Get Catalog Logs	2026-02-12T01:37:59.8544630Z [GIN] 2026/02/12 - 01:37:55 | 200 |    1.302435ms |      10.0.2.139 | GET      "/catalogue?tags=&order=&page=1&size=4"
+debug	Get Carts Logs	﻿2026-02-12T01:37:59.8569279Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=carts --tail=100 || true
+debug	Get Carts Logs	2026-02-12T01:37:59.8569931Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=carts --tail=100 || true[0m
+debug	Get Carts Logs	2026-02-12T01:37:59.8600795Z shell: /usr/bin/bash -e {0}
+debug	Get Carts Logs	2026-02-12T01:37:59.8601027Z env:
+debug	Get Carts Logs	2026-02-12T01:37:59.8601216Z   AWS_DEFAULT_REGION: us-east-1
+debug	Get Carts Logs	2026-02-12T01:37:59.8601453Z   AWS_REGION: us-east-1
+debug	Get Carts Logs	2026-02-12T01:37:59.8601778Z   AWS_ACCESS_KEY_ID: ***
+debug	Get Carts Logs	2026-02-12T01:37:59.8602095Z   AWS_SECRET_ACCESS_KEY: ***
+debug	Get Carts Logs	2026-02-12T01:37:59.8602314Z ##[endgroup]
+debug	Get Carts Logs	2026-02-12T01:38:00.7411302Z software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException: Cannot do operations on a non-existent table (Service: DynamoDb, Status Code: 400, Request ID: b563c0ef-dd67-4178-b2be-e324daeb5614)
+debug	Get Carts Logs	2026-02-12T01:38:00.7414329Z 	at software.amazon.awssdk.core.internal.http.CombinedResponseHandler.handleErrorResponse(CombinedResponseHandler.java:124) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7415847Z 	at software.amazon.awssdk.core.internal.http.CombinedResponseHandler.handleResponse(CombinedResponseHandler.java:81) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7417274Z 	at software.amazon.awssdk.core.internal.http.CombinedResponseHandler.handle(CombinedResponseHandler.java:59) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7419139Z 	at software.amazon.awssdk.core.internal.http.CombinedResponseHandler.handle(CombinedResponseHandler.java:40) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7420833Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.HandleResponseStage.execute(HandleResponseStage.java:50) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7422126Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.HandleResponseStage.execute(HandleResponseStage.java:38) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7423410Z 	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7425047Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptTimeoutTrackingStage.execute(ApiCallAttemptTimeoutTrackingStage.java:74) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7426521Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptTimeoutTrackingStage.execute(ApiCallAttemptTimeoutTrackingStage.java:43) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7427921Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.TimeoutExceptionHandlingStage.execute(TimeoutExceptionHandlingStage.java:79) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7429256Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.TimeoutExceptionHandlingStage.execute(TimeoutExceptionHandlingStage.java:41) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7430640Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptMetricCollectionStage.execute(ApiCallAttemptMetricCollectionStage.java:55) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7432359Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptMetricCollectionStage.execute(ApiCallAttemptMetricCollectionStage.java:39) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7433651Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.executeRequest(RetryableStage2.java:93) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7434915Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.execute(RetryableStage2.java:56) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7435966Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.execute(RetryableStage2.java:36) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7437165Z 	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7438323Z 	at software.amazon.awssdk.core.internal.http.StreamManagingStage.execute(StreamManagingStage.java:53) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7439508Z 	at software.amazon.awssdk.core.internal.http.StreamManagingStage.execute(StreamManagingStage.java:35) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7440690Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.executeWithTimer(ApiCallTimeoutTrackingStage.java:82) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7442866Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.execute(ApiCallTimeoutTrackingStage.java:62) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7444422Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.execute(ApiCallTimeoutTrackingStage.java:43) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7445729Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallMetricCollectionStage.execute(ApiCallMetricCollectionStage.java:50) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7447041Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallMetricCollectionStage.execute(ApiCallMetricCollectionStage.java:32) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7448381Z 	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7449728Z 	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7451171Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ExecutionFailureExceptionReportingStage.execute(ExecutionFailureExceptionReportingStage.java:37) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7452713Z 	at software.amazon.awssdk.core.internal.http.pipeline.stages.ExecutionFailureExceptionReportingStage.execute(ExecutionFailureExceptionReportingStage.java:26) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7454265Z 	at software.amazon.awssdk.core.internal.http.AmazonSyncHttpClient$RequestExecutionBuilderImpl.execute(AmazonSyncHttpClient.java:210) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7455398Z 	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.invoke(BaseSyncClientHandler.java:103) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7456435Z 	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.doExecute(BaseSyncClientHandler.java:173) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7457503Z 	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.lambda$execute$1(BaseSyncClientHandler.java:80) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7458631Z 	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.measureApiCallSuccess(BaseSyncClientHandler.java:182) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7459739Z 	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.execute(BaseSyncClientHandler.java:74) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7460940Z 	at software.amazon.awssdk.core.client.handler.SdkSyncClientHandler.execute(SdkSyncClientHandler.java:45) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7461976Z 	at software.amazon.awssdk.awscore.client.handler.AwsSyncClientHandler.execute(AwsSyncClientHandler.java:53) ~[aws-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7462980Z 	at software.amazon.awssdk.services.dynamodb.DefaultDynamoDbClient.query(DefaultDynamoDbClient.java:4708) ~[dynamodb-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7464043Z 	at software.amazon.awssdk.services.dynamodb.paginators.QueryIterable$QueryResponseFetcher.nextPage(QueryIterable.java:135) ~[dynamodb-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7465453Z 	at software.amazon.awssdk.services.dynamodb.paginators.QueryIterable$QueryResponseFetcher.nextPage(QueryIterable.java:126) ~[dynamodb-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7466568Z 	at software.amazon.awssdk.core.pagination.sync.PaginatedResponsesIterator.next(PaginatedResponsesIterator.java:58) ~[sdk-core-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7467804Z 	at software.amazon.awssdk.enhanced.dynamodb.internal.TransformIterator.next(TransformIterator.java:44) ~[dynamodb-enhanced-2.29.43.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7468737Z 	at com.amazon.sample.carts.services.DynamoDBCartService.items(DynamoDBCartService.java:153) ~[!/:0.0.1-SNAPSHOT]
+debug	Get Carts Logs	2026-02-12T01:38:00.7469563Z 	at com.amazon.sample.carts.services.DynamoDBCartService.get(DynamoDBCartService.java:99) ~[!/:0.0.1-SNAPSHOT]
+debug	Get Carts Logs	2026-02-12T01:38:00.7470325Z 	at com.amazon.sample.carts.controllers.CartsController.get(CartsController.java:48) ~[!/:0.0.1-SNAPSHOT]
+debug	Get Carts Logs	2026-02-12T01:38:00.7470984Z 	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source) ~[?:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7471697Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7472360Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7473111Z 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7474319Z 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7475609Z 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7477067Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7478502Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7479803Z 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7480870Z 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7481795Z 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7482730Z 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7483630Z 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7484493Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7485279Z 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7486200Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7487080Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7488069Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7488954Z 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7489878Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7490857Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7491835Z 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7492953Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7493944Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7495034Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7495987Z 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7496921Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7497903Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7498906Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7499961Z 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7501009Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7501983Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7502973Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7503983Z 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7505102Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar!/:6.2.1]
+debug	Get Carts Logs	2026-02-12T01:38:00.7506096Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7507082Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7507999Z 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7508887Z 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7509789Z 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7510669Z 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7511642Z 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7512488Z 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7513314Z 	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:731) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7514205Z 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7515020Z 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7515857Z 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7516742Z 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7518791Z 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7519692Z 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7520603Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7521531Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7522409Z 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.34.jar!/:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7523013Z 	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+debug	Get Carts Logs	2026-02-12T01:38:00.7523247Z 
+debug	Get Orders Logs	﻿2026-02-12T01:38:00.7546930Z ##[group]Run kubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true
+debug	Get Orders Logs	2026-02-12T01:38:00.7547609Z [36;1mkubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true[0m
+debug	Get Orders Logs	2026-02-12T01:38:00.7578276Z shell: /usr/bin/bash -e {0}
+debug	Get Orders Logs	2026-02-12T01:38:00.7578513Z env:
+debug	Get Orders Logs	2026-02-12T01:38:00.7578702Z   AWS_DEFAULT_REGION: us-east-1
+debug	Get Orders Logs	2026-02-12T01:38:00.7578946Z   AWS_REGION: us-east-1
+debug	Get Orders Logs	2026-02-12T01:38:00.7579276Z   AWS_ACCESS_KEY_ID: ***
+debug	Get Orders Logs	2026-02-12T01:38:00.7579615Z   AWS_SECRET_ACCESS_KEY: ***
+debug	Get Orders Logs	2026-02-12T01:38:00.7579840Z ##[endgroup]
+debug	Get Orders Logs	2026-02-12T01:38:01.6682533Z Picked up JAVA_TOOL_OPTIONS: -javaagent:/opt/aws-opentelemetry-agent.jar
+debug	Get Orders Logs	2026-02-12T01:38:01.6684035Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+debug	Get Orders Logs	2026-02-12T01:38:01.6685527Z [otel.javaagent 2026-02-11 21:30:07:144 +0000] [main] INFO io.opentelemetry.javaagent.tooling.VersionLogger - opentelemetry-javaagent - version: 1.24.0-aws
+debug	Get Orders Logs	2026-02-12T01:38:01.6686992Z Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+debug	Get Orders Logs	2026-02-12T01:38:01.6687766Z 
+debug	Get Orders Logs	2026-02-12T01:38:01.6687889Z   .   ____          _            __ _ _
+debug	Get Orders Logs	2026-02-12T01:38:01.6688280Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+debug	Get Orders Logs	2026-02-12T01:38:01.6688658Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+debug	Get Orders Logs	2026-02-12T01:38:01.6689039Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+debug	Get Orders Logs	2026-02-12T01:38:01.6689349Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+debug	Get Orders Logs	2026-02-12T01:38:01.6689621Z  =========|_|==============|___/=/_/_/_/
+debug	Get Orders Logs	2026-02-12T01:38:01.6693570Z  :: Spring Boot ::                (v3.2.5)
+debug	Get Orders Logs	2026-02-12T01:38:01.6693790Z 
+debug	Get Orders Logs	2026-02-12T01:38:01.6694581Z 2026-02-11T21:30:10.048Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : Starting OrdersApplication v0.0.1-SNAPSHOT using Java 17.0.13 with PID 1 (/app/app.jar started by appuser in /app)
+debug	Get Orders Logs	2026-02-12T01:38:01.6695687Z 2026-02-11T21:30:10.083Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : No active profile set, falling back to 1 default profile: "default"
+debug	Get Orders Logs	2026-02-12T01:38:01.6696962Z 2026-02-11T21:30:12.997Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+debug	Get Orders Logs	2026-02-12T01:38:01.6698013Z 2026-02-11T21:30:13.081Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JDBC repository interface.
+debug	Get Orders Logs	2026-02-12T01:38:01.6698947Z 2026-02-11T21:30:14.144Z  INFO 1 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+debug	Get Orders Logs	2026-02-12T01:38:01.6699644Z 2026-02-11T21:30:14.166Z  INFO 1 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+debug	Get Orders Logs	2026-02-12T01:38:01.6700348Z 2026-02-11T21:30:14.167Z  INFO 1 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.20]
+debug	Get Orders Logs	2026-02-12T01:38:01.6701094Z 2026-02-11T21:30:14.261Z  INFO 1 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+debug	Get Orders Logs	2026-02-12T01:38:01.6701967Z 2026-02-11T21:30:14.267Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3374 ms
+debug	Get Orders Logs	2026-02-12T01:38:01.6702984Z Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+debug	Get Orders Logs	2026-02-12T01:38:01.6703860Z 2026-02-11T21:30:15.081Z  INFO 1 --- [           main] c.a.s.o.c.m.RabbitMQMessagingConfig      : Creating RabbitMQ messaging provider
+debug	Get Orders Logs	2026-02-12T01:38:01.6704695Z 2026-02-11T21:30:15.275Z  INFO 1 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+debug	Get Orders Logs	2026-02-12T01:38:01.6705516Z 2026-02-11T21:30:15.714Z  INFO 1 --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ea2f72e
+debug	Get Orders Logs	2026-02-12T01:38:01.6706571Z 2026-02-11T21:30:15.717Z  INFO 1 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+debug	Get Orders Logs	2026-02-12T01:38:01.6707343Z 2026-02-11T21:30:15.881Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 9.22.3 by Redgate
+debug	Get Orders Logs	2026-02-12T01:38:01.6708099Z 2026-02-11T21:30:15.883Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : See release notes here: https://rd.gt/416ObMi
+debug	Get Orders Logs	2026-02-12T01:38:01.6708754Z 2026-02-11T21:30:15.884Z  INFO 1 --- [           main] o.f.c.i.l.VersionPrinter                 : 
+debug	Get Orders Logs	2026-02-12T01:38:01.6709725Z 2026-02-11T21:30:15.941Z  INFO 1 --- [           main] o.f.c.FlywayExecutor                     : Database: jdbc:postgresql://bedrock-orders.cuf28wk0won0.us-east-1.rds.amazonaws.com:5432/orders (PostgreSQL 16.3)
+debug	Get Orders Logs	2026-02-12T01:38:01.6711137Z 2026-02-11T21:30:15.960Z  WARN 1 --- [           main] o.f.c.i.d.b.Database                     : Flyway upgrade recommended: PostgreSQL 16.3 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+debug	Get Orders Logs	2026-02-12T01:38:01.6712328Z 2026-02-11T21:30:16.055Z  INFO 1 --- [           main] o.f.c.i.c.DbValidate                     : Successfully validated 1 migration (execution time 00:00.076s)
+debug	Get Orders Logs	2026-02-12T01:38:01.6713093Z 2026-02-11T21:30:16.107Z  INFO 1 --- [           main] o.f.c.i.c.DbMigrate                      : Current version of schema "public": 1
+debug	Get Orders Logs	2026-02-12T01:38:01.6713868Z 2026-02-11T21:30:16.113Z  INFO 1 --- [           main] o.f.c.i.c.DbMigrate                      : Schema "public" is up to date. No migration necessary.
+debug	Get Orders Logs	2026-02-12T01:38:01.6714796Z 2026-02-11T21:30:18.187Z  INFO 1 --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+debug	Get Orders Logs	2026-02-12T01:38:01.6715629Z 2026-02-11T21:30:18.356Z  INFO 1 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+debug	Get Orders Logs	2026-02-12T01:38:01.6716633Z 2026-02-11T21:30:18.394Z  INFO 1 --- [           main] c.a.s.o.OrdersApplication                : Started OrdersApplication in 9.46 seconds (process running for 11.598)
+debug	Get Orders Logs	2026-02-12T01:38:01.6717513Z 2026-02-11T21:30:51.845Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+debug	Get Orders Logs	2026-02-12T01:38:01.6718320Z 2026-02-11T21:30:51.845Z  INFO 1 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+debug	Get Orders Logs	2026-02-12T01:38:01.7060923Z 2026-02-11T21:30:51.848Z  INFO 1 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+debug	Post Configure AWS credentials	﻿2026-02-12T01:38:01.7155287Z Post job cleanup.
+debug	Complete job	﻿2026-02-12T01:38:01.7565712Z Cleaning up orphan processes

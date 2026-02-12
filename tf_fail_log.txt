@@ -1,0 +1,524 @@
+Terraform	Set up job	﻿2026-02-11T23:12:01.6827719Z Current runner version: '2.331.0'
+Terraform	Set up job	2026-02-11T23:12:01.6853256Z ##[group]Runner Image Provisioner
+Terraform	Set up job	2026-02-11T23:12:01.6854218Z Hosted Compute Agent
+Terraform	Set up job	2026-02-11T23:12:01.6854787Z Version: 20260123.484
+Terraform	Set up job	2026-02-11T23:12:01.6855383Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+Terraform	Set up job	2026-02-11T23:12:01.6856168Z Build Date: 2026-01-23T19:41:17Z
+Terraform	Set up job	2026-02-11T23:12:01.6857041Z Worker ID: {239c92b3-79d4-411e-8b30-f35012383789}
+Terraform	Set up job	2026-02-11T23:12:01.6857679Z Azure Region: eastus2
+Terraform	Set up job	2026-02-11T23:12:01.6858295Z ##[endgroup]
+Terraform	Set up job	2026-02-11T23:12:01.6859694Z ##[group]Operating System
+Terraform	Set up job	2026-02-11T23:12:01.6860261Z Ubuntu
+Terraform	Set up job	2026-02-11T23:12:01.6860852Z 24.04.3
+Terraform	Set up job	2026-02-11T23:12:01.6861307Z LTS
+Terraform	Set up job	2026-02-11T23:12:01.6861716Z ##[endgroup]
+Terraform	Set up job	2026-02-11T23:12:01.6862292Z ##[group]Runner Image
+Terraform	Set up job	2026-02-11T23:12:01.6862867Z Image: ubuntu-24.04
+Terraform	Set up job	2026-02-11T23:12:01.6863422Z Version: 20260201.15.1
+Terraform	Set up job	2026-02-11T23:12:01.6864406Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+Terraform	Set up job	2026-02-11T23:12:01.6866095Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+Terraform	Set up job	2026-02-11T23:12:01.6867445Z ##[endgroup]
+Terraform	Set up job	2026-02-11T23:12:01.6868451Z ##[group]GITHUB_TOKEN Permissions
+Terraform	Set up job	2026-02-11T23:12:01.6870352Z Contents: read
+Terraform	Set up job	2026-02-11T23:12:01.6870939Z Metadata: read
+Terraform	Set up job	2026-02-11T23:12:01.6871529Z ##[endgroup]
+Terraform	Set up job	2026-02-11T23:12:01.6873602Z Secret source: Actions
+Terraform	Set up job	2026-02-11T23:12:01.6874340Z Prepare workflow directory
+Terraform	Set up job	2026-02-11T23:12:01.7266747Z Prepare all required actions
+Terraform	Set up job	2026-02-11T23:12:01.7303801Z Getting action download info
+Terraform	Set up job	2026-02-11T23:12:02.0348817Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Terraform	Set up job	2026-02-11T23:12:02.1529617Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+Terraform	Set up job	2026-02-11T23:12:02.5014021Z Complete job name: Terraform
+Terraform	Checkout	﻿2026-02-11T23:12:02.5677325Z ##[group]Run actions/checkout@v4
+Terraform	Checkout	2026-02-11T23:12:02.5678254Z with:
+Terraform	Checkout	2026-02-11T23:12:02.5678687Z   repository: Kindee18/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.5679383Z   token: ***
+Terraform	Checkout	2026-02-11T23:12:02.5679765Z   ssh-strict: true
+Terraform	Checkout	2026-02-11T23:12:02.5680150Z   ssh-user: git
+Terraform	Checkout	2026-02-11T23:12:02.5680547Z   persist-credentials: true
+Terraform	Checkout	2026-02-11T23:12:02.5680994Z   clean: true
+Terraform	Checkout	2026-02-11T23:12:02.5681386Z   sparse-checkout-cone-mode: true
+Terraform	Checkout	2026-02-11T23:12:02.5681861Z   fetch-depth: 1
+Terraform	Checkout	2026-02-11T23:12:02.5682238Z   fetch-tags: false
+Terraform	Checkout	2026-02-11T23:12:02.5682628Z   show-progress: true
+Terraform	Checkout	2026-02-11T23:12:02.5683027Z   lfs: false
+Terraform	Checkout	2026-02-11T23:12:02.5683391Z   submodules: false
+Terraform	Checkout	2026-02-11T23:12:02.5683785Z   set-safe-directory: true
+Terraform	Checkout	2026-02-11T23:12:02.5684419Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.6771739Z Syncing repository: Kindee18/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.6773906Z ##[group]Getting Git version info
+Terraform	Checkout	2026-02-11T23:12:02.6775171Z Working directory is '/home/runner/work/project-bedrock/project-bedrock'
+Terraform	Checkout	2026-02-11T23:12:02.6777330Z [command]/usr/bin/git version
+Terraform	Checkout	2026-02-11T23:12:02.6846795Z git version 2.52.0
+Terraform	Checkout	2026-02-11T23:12:02.6873689Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.6890007Z Temporarily overriding HOME='/home/runner/work/_temp/0f6f15fc-8dca-4a3d-9b1c-a639b590dee8' before making global git config changes
+Terraform	Checkout	2026-02-11T23:12:02.6892493Z Adding repository directory to the temporary git global config as a safe directory
+Terraform	Checkout	2026-02-11T23:12:02.6904232Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-bedrock/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.6943681Z Deleting the contents of '/home/runner/work/project-bedrock/project-bedrock'
+Terraform	Checkout	2026-02-11T23:12:02.6947925Z ##[group]Initializing the repository
+Terraform	Checkout	2026-02-11T23:12:02.6952587Z [command]/usr/bin/git init /home/runner/work/project-bedrock/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.7054439Z hint: Using 'master' as the name for the initial branch. This default branch name
+Terraform	Checkout	2026-02-11T23:12:02.7056132Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Terraform	Checkout	2026-02-11T23:12:02.7057880Z hint: to use in all of your new repositories, which will suppress this warning,
+Terraform	Checkout	2026-02-11T23:12:02.7059350Z hint: call:
+Terraform	Checkout	2026-02-11T23:12:02.7059944Z hint:
+Terraform	Checkout	2026-02-11T23:12:02.7060746Z hint: 	git config --global init.defaultBranch <name>
+Terraform	Checkout	2026-02-11T23:12:02.7061785Z hint:
+Terraform	Checkout	2026-02-11T23:12:02.7062811Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Terraform	Checkout	2026-02-11T23:12:02.7064482Z hint: 'development'. The just-created branch can be renamed via this command:
+Terraform	Checkout	2026-02-11T23:12:02.7065889Z hint:
+Terraform	Checkout	2026-02-11T23:12:02.7066814Z hint: 	git branch -m <name>
+Terraform	Checkout	2026-02-11T23:12:02.7067618Z hint:
+Terraform	Checkout	2026-02-11T23:12:02.7068723Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Terraform	Checkout	2026-02-11T23:12:02.7070671Z Initialized empty Git repository in /home/runner/work/project-bedrock/project-bedrock/.git/
+Terraform	Checkout	2026-02-11T23:12:02.7073613Z [command]/usr/bin/git remote add origin https://github.com/Kindee18/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.7104069Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.7105307Z ##[group]Disabling automatic garbage collection
+Terraform	Checkout	2026-02-11T23:12:02.7108332Z [command]/usr/bin/git config --local gc.auto 0
+Terraform	Checkout	2026-02-11T23:12:02.7138533Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.7139742Z ##[group]Setting up auth
+Terraform	Checkout	2026-02-11T23:12:02.7145518Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Terraform	Checkout	2026-02-11T23:12:02.7177690Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Terraform	Checkout	2026-02-11T23:12:02.7508863Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Terraform	Checkout	2026-02-11T23:12:02.7538165Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Terraform	Checkout	2026-02-11T23:12:02.7768039Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Terraform	Checkout	2026-02-11T23:12:02.7807735Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Terraform	Checkout	2026-02-11T23:12:02.8038695Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Terraform	Checkout	2026-02-11T23:12:02.8073299Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.8074573Z ##[group]Fetching the repository
+Terraform	Checkout	2026-02-11T23:12:02.8083031Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2077308a604cb5fee3e22b89830e91f339f63522:refs/remotes/origin/main
+Terraform	Checkout	2026-02-11T23:12:02.9780010Z From https://github.com/Kindee18/project-bedrock
+Terraform	Checkout	2026-02-11T23:12:02.9781204Z  * [new ref]         2077308a604cb5fee3e22b89830e91f339f63522 -> origin/main
+Terraform	Checkout	2026-02-11T23:12:02.9811751Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.9813006Z ##[group]Determining the checkout info
+Terraform	Checkout	2026-02-11T23:12:02.9814487Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:02.9819784Z [command]/usr/bin/git sparse-checkout disable
+Terraform	Checkout	2026-02-11T23:12:02.9860002Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Terraform	Checkout	2026-02-11T23:12:02.9885959Z ##[group]Checking out the ref
+Terraform	Checkout	2026-02-11T23:12:02.9890672Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Terraform	Checkout	2026-02-11T23:12:02.9959623Z Switched to a new branch 'main'
+Terraform	Checkout	2026-02-11T23:12:02.9962526Z branch 'main' set up to track 'origin/main'.
+Terraform	Checkout	2026-02-11T23:12:02.9969079Z ##[endgroup]
+Terraform	Checkout	2026-02-11T23:12:03.0001232Z [command]/usr/bin/git log -1 --format=%H
+Terraform	Checkout	2026-02-11T23:12:03.0022418Z 2077308a604cb5fee3e22b89830e91f339f63522
+Terraform	Setup Terraform	﻿2026-02-11T23:12:03.0209590Z ##[group]Run hashicorp/setup-terraform@v3
+Terraform	Setup Terraform	2026-02-11T23:12:03.0210171Z with:
+Terraform	Setup Terraform	2026-02-11T23:12:03.0210621Z   cli_config_credentials_hostname: app.terraform.io
+Terraform	Setup Terraform	2026-02-11T23:12:03.0211197Z   terraform_version: latest
+Terraform	Setup Terraform	2026-02-11T23:12:03.0211667Z   terraform_wrapper: true
+Terraform	Setup Terraform	2026-02-11T23:12:03.0212111Z ##[endgroup]
+Terraform	Setup Terraform	2026-02-11T23:12:03.5585005Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/f774d57b-de3e-4ff2-8253-151edad13fe8
+Terraform	Terraform Init	﻿2026-02-11T23:12:04.2454718Z ##[group]Run terraform init
+Terraform	Terraform Init	2026-02-11T23:12:04.2455343Z [36;1mterraform init[0m
+Terraform	Terraform Init	2026-02-11T23:12:04.2494099Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Terraform	Terraform Init	2026-02-11T23:12:04.2494535Z env:
+Terraform	Terraform Init	2026-02-11T23:12:04.2494902Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/690fe1c0-3322-4265-bb96-803feb83d4c6
+Terraform	Terraform Init	2026-02-11T23:12:04.2495608Z   AWS_ACCESS_KEY_ID: ***
+Terraform	Terraform Init	2026-02-11T23:12:04.2495986Z   AWS_SECRET_ACCESS_KEY: ***
+Terraform	Terraform Init	2026-02-11T23:12:04.2496245Z ##[endgroup]
+Terraform	Terraform Init	2026-02-11T23:12:05.8636003Z [0m[1mInitializing the backend...[0m
+Terraform	Terraform Init	2026-02-11T23:12:06.0408697Z [0m[32m
+Terraform	Terraform Init	2026-02-11T23:12:06.0409989Z Successfully configured the backend "s3"! Terraform will automatically
+Terraform	Terraform Init	2026-02-11T23:12:06.0411086Z use this backend unless the backend configuration changes.[0m
+Terraform	Terraform Init	2026-02-11T23:12:06.2371545Z [0m[1mInitializing modules...[0m
+Terraform	Terraform Init	2026-02-11T23:12:06.3729441Z Downloading registry.terraform.io/terraform-aws-modules/eks/aws 20.37.2 for eks...
+Terraform	Terraform Init	2026-02-11T23:12:06.8721738Z - eks in .terraform/modules/eks
+Terraform	Terraform Init	2026-02-11T23:12:06.8808671Z - eks.eks_managed_node_group in .terraform/modules/eks/modules/eks-managed-node-group
+Terraform	Terraform Init	2026-02-11T23:12:06.8832992Z - eks.eks_managed_node_group.user_data in .terraform/modules/eks/modules/_user_data
+Terraform	Terraform Init	2026-02-11T23:12:06.8851802Z - eks.fargate_profile in .terraform/modules/eks/modules/fargate-profile
+Terraform	Terraform Init	2026-02-11T23:12:06.8935746Z Downloading registry.terraform.io/terraform-aws-modules/kms/aws 2.1.0 for eks.kms...
+Terraform	Terraform Init	2026-02-11T23:12:07.0873738Z - eks.kms in .terraform/modules/eks.kms
+Terraform	Terraform Init	2026-02-11T23:12:07.0974649Z - eks.self_managed_node_group in .terraform/modules/eks/modules/self-managed-node-group
+Terraform	Terraform Init	2026-02-11T23:12:07.0979846Z - eks.self_managed_node_group.user_data in .terraform/modules/eks/modules/_user_data
+Terraform	Terraform Init	2026-02-11T23:12:07.1121798Z Downloading registry.terraform.io/terraform-aws-modules/vpc/aws 5.21.0 for vpc...
+Terraform	Terraform Init	2026-02-11T23:12:07.4597394Z - vpc in .terraform/modules/vpc
+Terraform	Terraform Init	2026-02-11T23:12:07.4715773Z [0m[1mInitializing provider plugins...[0m
+Terraform	Terraform Init	2026-02-11T23:12:07.4717011Z - Finding latest version of hashicorp/archive...
+Terraform	Terraform Init	2026-02-11T23:12:07.4953379Z - Finding hashicorp/tls versions matching ">= 3.0.0"...
+Terraform	Terraform Init	2026-02-11T23:12:07.5166228Z - Finding hashicorp/kubernetes versions matching "~> 2.31"...
+Terraform	Terraform Init	2026-02-11T23:12:07.5381521Z - Finding hashicorp/helm versions matching "~> 2.15"...
+Terraform	Terraform Init	2026-02-11T23:12:07.5606452Z - Finding hashicorp/null versions matching ">= 3.0.0"...
+Terraform	Terraform Init	2026-02-11T23:12:07.5818698Z - Finding hashicorp/aws versions matching ">= 4.33.0, ~> 5.0, >= 5.79.0, >= 5.95.0, < 6.0.0"...
+Terraform	Terraform Init	2026-02-11T23:12:07.6056659Z - Finding hashicorp/time versions matching ">= 0.9.0"...
+Terraform	Terraform Init	2026-02-11T23:12:07.6272213Z - Finding hashicorp/cloudinit versions matching ">= 2.0.0"...
+Terraform	Terraform Init	2026-02-11T23:12:07.7383349Z - Installing hashicorp/archive v2.7.1...
+Terraform	Terraform Init	2026-02-11T23:12:07.9522258Z - Installed hashicorp/archive v2.7.1 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:08.0396561Z - Installing hashicorp/tls v4.2.1...
+Terraform	Terraform Init	2026-02-11T23:12:08.2835568Z - Installed hashicorp/tls v4.2.1 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:08.3688035Z - Installing hashicorp/kubernetes v2.38.0...
+Terraform	Terraform Init	2026-02-11T23:12:08.8640571Z - Installed hashicorp/kubernetes v2.38.0 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:08.9529182Z - Installing hashicorp/helm v2.17.0...
+Terraform	Terraform Init	2026-02-11T23:12:09.4511560Z - Installed hashicorp/helm v2.17.0 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:09.5453001Z - Installing hashicorp/null v3.2.4...
+Terraform	Terraform Init	2026-02-11T23:12:09.7577736Z - Installed hashicorp/null v3.2.4 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:09.8562882Z - Installing hashicorp/aws v5.100.0...
+Terraform	Terraform Init	2026-02-11T23:12:13.7211607Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:13.8110325Z - Installing hashicorp/time v0.13.1...
+Terraform	Terraform Init	2026-02-11T23:12:14.0171678Z - Installed hashicorp/time v0.13.1 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:14.0978057Z - Installing hashicorp/cloudinit v2.3.7...
+Terraform	Terraform Init	2026-02-11T23:12:14.3128588Z - Installed hashicorp/cloudinit v2.3.7 (signed by HashiCorp)
+Terraform	Terraform Init	2026-02-11T23:12:14.3130487Z Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+Terraform	Terraform Init	2026-02-11T23:12:14.3132582Z selections it made above. Include this file in your version control repository
+Terraform	Terraform Init	2026-02-11T23:12:14.3133720Z so that Terraform can guarantee to make the same selections by default when
+Terraform	Terraform Init	2026-02-11T23:12:14.3134731Z you run "terraform init" in the future.[0m
+Terraform	Terraform Init	2026-02-11T23:12:14.3140978Z 
+Terraform	Terraform Init	2026-02-11T23:12:14.3141692Z [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+Terraform	Terraform Init	2026-02-11T23:12:14.3142593Z [0m[32m
+Terraform	Terraform Init	2026-02-11T23:12:14.3143293Z You may now begin working with Terraform. Try running "terraform plan" to see
+Terraform	Terraform Init	2026-02-11T23:12:14.3144268Z any changes that are required for your infrastructure. All Terraform commands
+Terraform	Terraform Init	2026-02-11T23:12:14.3144750Z should now work.
+Terraform	Terraform Init	2026-02-11T23:12:14.3144882Z 
+Terraform	Terraform Init	2026-02-11T23:12:14.3145079Z If you ever set or change modules or backend configuration for Terraform,
+Terraform	Terraform Init	2026-02-11T23:12:14.3145589Z rerun this command to reinitialize your working directory. If you forget, other
+Terraform	Terraform Init	2026-02-11T23:12:14.3146136Z commands will detect it and remind you to do so if necessary.[0m
+Terraform	Terraform Plan	﻿2026-02-11T23:12:14.3562728Z ##[group]Run terraform plan -input=false
+Terraform	Terraform Plan	2026-02-11T23:12:14.3563086Z [36;1mterraform plan -input=false[0m
+Terraform	Terraform Plan	2026-02-11T23:12:14.3596091Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Terraform	Terraform Plan	2026-02-11T23:12:14.3596556Z env:
+Terraform	Terraform Plan	2026-02-11T23:12:14.3596893Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/690fe1c0-3322-4265-bb96-803feb83d4c6
+Terraform	Terraform Plan	2026-02-11T23:12:14.3597425Z   AWS_ACCESS_KEY_ID: ***
+Terraform	Terraform Plan	2026-02-11T23:12:14.3597755Z   AWS_SECRET_ACCESS_KEY: ***
+Terraform	Terraform Plan	2026-02-11T23:12:14.3597979Z ##[endgroup]
+Terraform	Terraform Plan	2026-02-11T23:12:18.4328485Z [0m[1mdata.archive_file.lambda: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.4403323Z [0m[1mdata.archive_file.lambda: Read complete after 0s [id=8e0e128809f7bb888a2e7754d71d9dd3a9dd6c03][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6168445Z [0m[1mmodule.eks.data.aws_partition.current[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6169541Z [0m[1maws_iam_user.bedrock_ci: Refreshing state... [id=bedrock-ci][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6170563Z [0m[1maws_iam_user.bedrock_dev_view: Refreshing state... [id=bedrock-dev-view][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6171785Z [0m[1maws_iam_role.lambda_role: Refreshing state... [id=bedrock-lambda-role][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6173214Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6174803Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_caller_identity.current: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6176033Z [0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6217125Z [0m[1maws_iam_policy.lb_controller: Refreshing state... [id=arn:aws:iam::125168806853:policy/AWSLoadBalancerControllerIAMPolicy][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6219272Z [0m[1mmodule.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/project-bedrock-cluster/cluster][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6220736Z [0m[1maws_s3_bucket.assets: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6221928Z [0m[1mmodule.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6223037Z [0m[1mmodule.eks.data.aws_caller_identity.current[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6224217Z [0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6225958Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6253774Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_partition.current: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6264534Z [0m[1mmodule.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0c7330275cf247a1a][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6265883Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_partition.current: Read complete after 0s [id=aws][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6277837Z [0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6330056Z [0m[1mmodule.eks.data.aws_caller_identity.current[0]: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6341433Z [0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6353637Z [0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6379104Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role.this[0]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6419150Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_caller_identity.current: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6432613Z [0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6438937Z [0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::125168806853:user/bedrock-ci][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6458147Z [0m[1mmodule.eks.aws_iam_role.this[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6502765Z [0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6541956Z [0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6585063Z [0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.6632355Z [0m[1mmodule.eks.aws_iam_policy.custom[0]: Refreshing state... [id=arn:aws:iam::125168806853:policy/project-bedrock-cluster-cluster-20260206211045474800000003][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.7793666Z [0m[1maws_iam_user_policy_attachment.ci_admin: Refreshing state... [id=bedrock-ci-20260208104838438700000001][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.7803280Z [0m[1maws_iam_user_policy_attachment.readonly: Refreshing state... [id=bedrock-dev-view-20260206211046968300000004][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.7810111Z [0m[1maws_iam_access_key.bedrock_ci: Refreshing state... [id=***][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8129721Z [0m[1maws_iam_access_key.bedrock_dev_view: Refreshing state... [id=AKIAR2JFENPC7ZTKQ26O][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8546752Z [0m[1maws_iam_role_policy_attachment.lambda_logs: Refreshing state... [id=bedrock-lambda-role-20260206211047676500000008][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8589432Z [0m[1maws_lambda_function.processor: Refreshing state... [id=bedrock-asset-processor][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8680204Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047437300000005][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8683224Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047640700000007][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8687170Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047438700000006][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8730353Z [0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8815957Z [0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=1732486335][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8856758Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-2026020621104771340000000a][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8874084Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-2026020621104800820000000b][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.8894833Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEKS_CNI_Policy"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-20260206211047707500000009][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.9046951Z [0m[1mmodule.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=119df38d-2bba-4253-a33c-93d313f95526][0m
+Terraform	Terraform Plan	2026-02-11T23:12:18.9544165Z [0m[1maws_s3_bucket_public_access_block.assets: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.0677254Z [0m[1mmodule.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/project-bedrock-cluster][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.0692407Z [0m[1mmodule.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::125168806853:policy/project-bedrock-cluster-cluster-ClusterEncryption20260206211115876600000012][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.0800484Z [0m[1maws_lambda_permission.allow_bucket: Refreshing state... [id=AllowExecutionFromS3Bucket][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.1022366Z [0m[1maws_s3_bucket_notification.bucket_notification: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.1473457Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211116970900000013][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2830543Z [0m[1mmodule.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0d717d64e8705bb9d][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2833001Z [0m[1mmodule.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-00c0482c632345805][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2844180Z [0m[1mmodule.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0500203e76e6eabf2][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2851626Z [0m[1mmodule.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0aec986601e787140][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2854542Z [0m[1mmodule.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0fa5f603941189d5b][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2860542Z [0m[1mmodule.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-021fa1ca1eca22871][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2863344Z [0m[1mmodule.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0497fdf255240951a][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2940127Z [0m[1mmodule.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0db0c8004e49d9274][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2967126Z [0m[1mmodule.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-04b22270481d372bb][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.2982914Z [0m[1mmodule.eks.aws_security_group.node[0]: Refreshing state... [id=sg-0aea9c23d56bd0b6a][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.3791689Z [0m[1mmodule.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0c1f6e33fb7319b5e][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4011421Z [0m[1mmodule.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-00bfa245304a643f5][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4530180Z [0m[1mmodule.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-3338052695][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4537864Z [0m[1maws_security_group.rds: Refreshing state... [id=sg-04079d7da5d64b8b0][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4578584Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-1692001847][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4580375Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-2273345162][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4581944Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-321186269][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4644824Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-601873765][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4662083Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-3664154187][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4668359Z [0m[1mmodule.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-2984281907][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4699012Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-7919100][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.4851122Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-4170921802][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5526590Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-937236103][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5615389Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-2194673174][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5798467Z [0m[1mmodule.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-038508a1c396c83cf][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5801666Z [0m[1mmodule.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0e5bbb347a7a29fdc][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5803560Z [0m[1mmodule.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0bdf1c05230aeda8a][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.5805231Z [0m[1mmodule.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0776b4e993611353b][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.6105080Z [0m[1mmodule.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0c1f6e33fb7319b5e1080289494][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.6153424Z [0m[1mmodule.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-052c4a6d08bc3f247][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.6345565Z [0m[1maws_db_subnet_group.bedrock: Refreshing state... [id=bedrock-db-subnet-group][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.6697503Z [0m[1mmodule.eks.aws_eks_cluster.this[0]: Refreshing state... [id=project-bedrock-cluster][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.7990242Z [0m[1mmodule.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-010939eb6ef614898][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8441192Z [0m[1mmodule.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0fa5f603941189d5b1080289494][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8684772Z [0m[1mmodule.eks.aws_ec2_tag.cluster_primary_security_group["Project"]: Refreshing state... [id=sg-038b07bb6d7fedc83,Project][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8693921Z [0m[1mmodule.eks.aws_eks_access_entry.this["ci_cd"]: Refreshing state... [id=project-bedrock-cluster:arn:aws:iam::125168806853:user/bedrock-ci][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8724561Z [0m[1mmodule.eks.aws_eks_access_entry.this["developer"]: Refreshing state... [id=project-bedrock-cluster:arn:aws:iam::125168806853:user/bedrock-dev-view][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8726172Z [0m[1mmodule.eks.data.tls_certificate.this[0]: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8727329Z [0m[1mmodule.eks.time_sleep.this[0]: Refreshing state... [id=2026-02-11T21:27:13Z][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8833812Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].module.user_data.null_resource.validate_cluster_service_cidr: Refreshing state... [id=2006944956402429539][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.8886140Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_launch_template.this[0]: Refreshing state... [id=lt-02e2e18e9408a7932][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9111461Z [0m[1maws_db_instance.catalog: Refreshing state... [id=db-3X7HNTTEPP5C5OUQQJRO37QORA][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9116814Z [0m[1maws_db_instance.orders: Refreshing state... [id=db-PACPYGHEPFKCWPORYUCNGN4RW4][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9530300Z [0m[1mmodule.eks.data.tls_certificate.this[0]: Read complete after 0s [id=b1b539daa206035ae3c3e28288b0681fa1b462f3][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9566087Z [0m[1mmodule.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::125168806853:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/C11DC103AC78796FD3CBE1FEF167AA03][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9656807Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_eks_node_group.this[0]: Refreshing state... [id=project-bedrock-cluster:main-20260206231803232400000001][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9939969Z [0m[1mdata.aws_iam_policy_document.lb_assume_role: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9955922Z [0m[1mdata.aws_iam_policy_document.lb_assume_role: Read complete after 0s [id=2138482506][0m
+Terraform	Terraform Plan	2026-02-11T23:12:19.9974234Z [0m[1maws_iam_role.lb_controller: Refreshing state... [id=bedrock-eks-lb-role][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.1081830Z [0m[1maws_iam_role_policy_attachment.lb_controller: Refreshing state... [id=bedrock-eks-lb-role-20260207024449439600000002][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.2347546Z [0m[1mmodule.eks.aws_eks_access_policy_association.this["ci_cd_admin"]: Refreshing state... [id=project-bedrock-cluster#arn:aws:iam::125168806853:user/bedrock-ci#arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.2351290Z [0m[1mmodule.eks.aws_eks_access_policy_association.this["developer_viewer"]: Refreshing state... [id=project-bedrock-cluster#arn:aws:iam::125168806853:user/bedrock-dev-view#arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.5544595Z [0m[1maws_eks_addon.cloudwatch_observability: Refreshing state... [id=project-bedrock-cluster:amazon-cloudwatch-observability][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.5547835Z [0m[1mdata.aws_eks_cluster.cluster: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.5555504Z [0m[1mdata.aws_eks_cluster_auth.cluster: Reading...[0m[0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.5558089Z [0m[1mdata.aws_eks_cluster_auth.cluster: Read complete after 0s [id=project-bedrock-cluster][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.7043970Z [0m[1mdata.aws_eks_cluster.cluster: Read complete after 0s [id=project-bedrock-cluster][0m
+Terraform	Terraform Plan	2026-02-11T23:12:20.7673682Z [0m[1mhelm_release.aws_load_balancer_controller: Refreshing state... [id=aws-load-balancer-controller][0m
+Terraform	Terraform Plan	2026-02-11T23:12:21.3800814Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3802785Z Terraform used the selected providers to generate the following execution
+Terraform	Terraform Plan	2026-02-11T23:12:21.3803861Z plan. Resource actions are indicated with the following symbols:
+Terraform	Terraform Plan	2026-02-11T23:12:21.3804851Z   [32m+[0m create[0m
+Terraform	Terraform Plan	2026-02-11T23:12:21.3805052Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3805229Z Terraform will perform the following actions:
+Terraform	Terraform Plan	2026-02-11T23:12:21.3805634Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3806240Z [1m  # module.eks.aws_eks_access_entry.this["cluster_creator"][0m will be created
+Terraform	Terraform Plan	2026-02-11T23:12:21.3807435Z [0m  [32m+[0m[0m resource "aws_eks_access_entry" "this" {
+Terraform	Terraform Plan	2026-02-11T23:12:21.3808304Z       [32m+[0m[0m access_entry_arn  = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3809063Z       [32m+[0m[0m cluster_name      = "project-bedrock-cluster"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3809732Z       [32m+[0m[0m created_at        = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3810351Z       [32m+[0m[0m id                = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3810972Z       [32m+[0m[0m kubernetes_groups = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3811688Z       [32m+[0m[0m modified_at       = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3812871Z       [32m+[0m[0m principal_arn     = "arn:aws:iam::125168806853:user/bedrock-ci"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3813692Z       [32m+[0m[0m tags              = {
+Terraform	Terraform Plan	2026-02-11T23:12:21.3814295Z           [32m+[0m[0m "Project" = "Bedrock"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3814621Z         }
+Terraform	Terraform Plan	2026-02-11T23:12:21.3814895Z       [32m+[0m[0m tags_all          = {
+Terraform	Terraform Plan	2026-02-11T23:12:21.3815269Z           [32m+[0m[0m "Project" = "Bedrock"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3815516Z         }
+Terraform	Terraform Plan	2026-02-11T23:12:21.3815757Z       [32m+[0m[0m type              = "STANDARD"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3816107Z       [32m+[0m[0m user_name         = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3816634Z     }
+Terraform	Terraform Plan	2026-02-11T23:12:21.3816739Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3817109Z [1m  # module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"][0m will be created
+Terraform	Terraform Plan	2026-02-11T23:12:21.3817721Z [0m  [32m+[0m[0m resource "aws_eks_access_policy_association" "this" {
+Terraform	Terraform Plan	2026-02-11T23:12:21.3818135Z       [32m+[0m[0m associated_at = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3818522Z       [32m+[0m[0m cluster_name  = "project-bedrock-cluster"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3818892Z       [32m+[0m[0m id            = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3819228Z       [32m+[0m[0m modified_at   = (known after apply)
+Terraform	Terraform Plan	2026-02-11T23:12:21.3819806Z       [32m+[0m[0m policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3820711Z       [32m+[0m[0m principal_arn = "arn:aws:iam::125168806853:user/bedrock-ci"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3821689Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3821937Z       [32m+[0m[0m access_scope {
+Terraform	Terraform Plan	2026-02-11T23:12:21.3822446Z           [32m+[0m[0m type = "cluster"
+Terraform	Terraform Plan	2026-02-11T23:12:21.3822853Z         }
+Terraform	Terraform Plan	2026-02-11T23:12:21.3823130Z     }
+Terraform	Terraform Plan	2026-02-11T23:12:21.3823295Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3823544Z [1mPlan:[0m [0m2 to add, 0 to change, 0 to destroy.
+Terraform	Terraform Plan	2026-02-11T23:12:21.3823827Z [90m
+Terraform	Terraform Plan	2026-02-11T23:12:21.3824502Z ─────────────────────────────────────────────────────────────────────────────[0m
+Terraform	Terraform Plan	2026-02-11T23:12:21.3825029Z 
+Terraform	Terraform Plan	2026-02-11T23:12:21.3825352Z Note: You didn't use the -out option to save this plan, so Terraform can't
+Terraform	Terraform Plan	2026-02-11T23:12:21.3826157Z guarantee to take exactly these actions if you run "terraform apply" now.
+Terraform	Terraform Apply	﻿2026-02-11T23:12:21.4171906Z ##[group]Run terraform apply -auto-approve -input=false
+Terraform	Terraform Apply	2026-02-11T23:12:21.4172338Z [36;1mterraform apply -auto-approve -input=false[0m
+Terraform	Terraform Apply	2026-02-11T23:12:21.4205738Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Terraform	Terraform Apply	2026-02-11T23:12:21.4206088Z env:
+Terraform	Terraform Apply	2026-02-11T23:12:21.4206621Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/690fe1c0-3322-4265-bb96-803feb83d4c6
+Terraform	Terraform Apply	2026-02-11T23:12:21.4207142Z   AWS_ACCESS_KEY_ID: ***
+Terraform	Terraform Apply	2026-02-11T23:12:21.4207448Z   AWS_SECRET_ACCESS_KEY: ***
+Terraform	Terraform Apply	2026-02-11T23:12:21.4207654Z ##[endgroup]
+Terraform	Terraform Apply	2026-02-11T23:12:25.1298947Z [0m[1mdata.archive_file.lambda: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.1321024Z [0m[1mdata.archive_file.lambda: Read complete after 0s [id=8e0e128809f7bb888a2e7754d71d9dd3a9dd6c03][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2498563Z [0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2503478Z [0m[1mmodule.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/project-bedrock-cluster/cluster][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2505240Z [0m[1maws_iam_user.bedrock_dev_view: Refreshing state... [id=bedrock-dev-view][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2506683Z [0m[1mmodule.eks.data.aws_partition.current[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2507744Z [0m[1maws_iam_user.bedrock_ci: Refreshing state... [id=bedrock-ci][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2509820Z [0m[1maws_iam_policy.lb_controller: Refreshing state... [id=arn:aws:iam::125168806853:policy/AWSLoadBalancerControllerIAMPolicy][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2511737Z [0m[1maws_iam_role.lambda_role: Refreshing state... [id=bedrock-lambda-role][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2531205Z [0m[1mmodule.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2533194Z [0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2534891Z [0m[1mmodule.eks.module.kms.data.aws_partition.current[0]: Read complete after 0s [id=aws][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2536655Z [0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2545745Z [0m[1maws_s3_bucket.assets: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2558798Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_partition.current: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2560566Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_partition.current: Read complete after 0s [id=aws][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2562717Z [0m[1mmodule.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0c7330275cf247a1a][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2564023Z [0m[1mmodule.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2575624Z [0m[1mmodule.eks.data.aws_caller_identity.current[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2582595Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_caller_identity.current: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2643822Z [0m[1mmodule.eks.module.kms.data.aws_caller_identity.current[0]: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2659021Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2671192Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2699953Z [0m[1mmodule.eks.aws_iam_role.this[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2729261Z [0m[1mmodule.eks.data.aws_caller_identity.current[0]: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2749719Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role.this[0]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2814927Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].data.aws_caller_identity.current: Read complete after 0s [id=125168806853][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2850965Z [0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2889508Z [0m[1mmodule.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2919314Z [0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2927251Z [0m[1mmodule.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::125168806853:user/bedrock-ci][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.2948606Z [0m[1mmodule.eks.aws_iam_policy.custom[0]: Refreshing state... [id=arn:aws:iam::125168806853:policy/project-bedrock-cluster-cluster-20260206211045474800000003][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3054006Z [0m[1maws_iam_user_policy_attachment.readonly: Refreshing state... [id=bedrock-dev-view-20260206211046968300000004][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3138992Z [0m[1maws_iam_access_key.bedrock_dev_view: Refreshing state... [id=AKIAR2JFENPC7ZTKQ26O][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3309871Z [0m[1maws_iam_user_policy_attachment.ci_admin: Refreshing state... [id=bedrock-ci-20260208104838438700000001][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3466756Z [0m[1maws_iam_access_key.bedrock_ci: Refreshing state... [id=***][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3776737Z [0m[1maws_iam_role_policy_attachment.lambda_logs: Refreshing state... [id=bedrock-lambda-role-20260206211047676500000008][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.3797035Z [0m[1maws_lambda_function.processor: Refreshing state... [id=bedrock-asset-processor][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4030888Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-2026020621104771340000000a][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4034083Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEKS_CNI_Policy"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-20260206211047707500000009][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4037569Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_iam_role_policy_attachment.this["AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=main-eks-node-group-20260206211045448200000001-2026020621104800820000000b][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4252942Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047437300000005][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4261383Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047640700000007][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4264304Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211047438700000006][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4284734Z [0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4312752Z [0m[1mmodule.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=1732486335][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.4351899Z [0m[1mmodule.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=119df38d-2bba-4253-a33c-93d313f95526][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5051124Z [0m[1maws_s3_bucket_public_access_block.assets: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5073813Z [0m[1mmodule.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/project-bedrock-cluster][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5083398Z [0m[1mmodule.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::125168806853:policy/project-bedrock-cluster-cluster-ClusterEncryption20260206211115876600000012][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5428136Z [0m[1maws_lambda_permission.allow_bucket: Refreshing state... [id=AllowExecutionFromS3Bucket][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5600177Z [0m[1maws_s3_bucket_notification.bucket_notification: Refreshing state... [id=bedrock-assets-alt-soe-025-1148][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.5858529Z [0m[1mmodule.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=project-bedrock-cluster-cluster-20260206211045467500000002-20260206211116970900000013][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7022896Z [0m[1mmodule.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0500203e76e6eabf2][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7025188Z [0m[1mmodule.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-00c0482c632345805][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7030194Z [0m[1mmodule.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0d717d64e8705bb9d][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7097676Z [0m[1mmodule.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0c1f6e33fb7319b5e][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7101326Z [0m[1mmodule.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0497fdf255240951a][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7102671Z [0m[1mmodule.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-00bfa245304a643f5][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7165233Z [0m[1mmodule.eks.aws_security_group.node[0]: Refreshing state... [id=sg-0aea9c23d56bd0b6a][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7195748Z [0m[1mmodule.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-04b22270481d372bb][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7225076Z [0m[1mmodule.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0aec986601e787140][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7230417Z [0m[1mmodule.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-021fa1ca1eca22871][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7597093Z [0m[1mmodule.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0db0c8004e49d9274][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7958156Z [0m[1mmodule.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0fa5f603941189d5b][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7979572Z [0m[1mmodule.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0c1f6e33fb7319b5e1080289494][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.7993716Z [0m[1mmodule.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-052c4a6d08bc3f247][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8398194Z [0m[1mmodule.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0776b4e993611353b][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8401298Z [0m[1mmodule.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-038508a1c396c83cf][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8516761Z [0m[1mmodule.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0e5bbb347a7a29fdc][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8518545Z [0m[1mmodule.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0bdf1c05230aeda8a][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8542837Z [0m[1maws_db_subnet_group.bedrock: Refreshing state... [id=bedrock-db-subnet-group][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8565697Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-601873765][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8569169Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-1692001847][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8578129Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-321186269][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8585921Z [0m[1maws_security_group.rds: Refreshing state... [id=sg-04079d7da5d64b8b0][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8917407Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-937236103][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.8954763Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-7919100][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9025135Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-2194673174][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9050343Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-2273345162][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9259061Z [0m[1mmodule.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-2984281907][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9265138Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-4170921802][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9732167Z [0m[1mmodule.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-3664154187][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9745020Z [0m[1mmodule.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-3338052695][0m
+Terraform	Terraform Apply	2026-02-11T23:12:25.9758292Z [0m[1mmodule.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-010939eb6ef614898][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.0221381Z [0m[1mmodule.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0fa5f603941189d5b1080289494][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.0843046Z [0m[1mmodule.eks.aws_eks_cluster.this[0]: Refreshing state... [id=project-bedrock-cluster][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.0914191Z [0m[1maws_db_instance.catalog: Refreshing state... [id=db-3X7HNTTEPP5C5OUQQJRO37QORA][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.0919902Z [0m[1maws_db_instance.orders: Refreshing state... [id=db-PACPYGHEPFKCWPORYUCNGN4RW4][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.2778982Z [0m[1mmodule.eks.aws_eks_access_entry.this["developer"]: Refreshing state... [id=project-bedrock-cluster:arn:aws:iam::125168806853:user/bedrock-dev-view][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.2783682Z [0m[1mmodule.eks.aws_ec2_tag.cluster_primary_security_group["Project"]: Refreshing state... [id=sg-038b07bb6d7fedc83,Project][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.2812386Z [0m[1mmodule.eks.aws_eks_access_entry.this["ci_cd"]: Refreshing state... [id=project-bedrock-cluster:arn:aws:iam::125168806853:user/bedrock-ci][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.2814021Z [0m[1mmodule.eks.data.tls_certificate.this[0]: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.2815018Z [0m[1mmodule.eks.time_sleep.this[0]: Refreshing state... [id=2026-02-11T21:27:13Z][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3010360Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].module.user_data.null_resource.validate_cluster_service_cidr: Refreshing state... [id=2006944956402429539][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3129103Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_launch_template.this[0]: Refreshing state... [id=lt-02e2e18e9408a7932][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3426261Z [0m[1mmodule.eks.data.tls_certificate.this[0]: Read complete after 0s [id=b1b539daa206035ae3c3e28288b0681fa1b462f3][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3458301Z [0m[1mmodule.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::125168806853:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/C11DC103AC78796FD3CBE1FEF167AA03][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3877572Z [0m[1mmodule.eks.module.eks_managed_node_group["main"].aws_eks_node_group.this[0]: Refreshing state... [id=project-bedrock-cluster:main-20260206231803232400000001][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3899414Z [0m[1mdata.aws_iam_policy_document.lb_assume_role: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3914405Z [0m[1mdata.aws_iam_policy_document.lb_assume_role: Read complete after 0s [id=2138482506][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.3932953Z [0m[1maws_iam_role.lb_controller: Refreshing state... [id=bedrock-eks-lb-role][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.4750647Z [0m[1maws_iam_role_policy_attachment.lb_controller: Refreshing state... [id=bedrock-eks-lb-role-20260207024449439600000002][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.5939514Z [0m[1mmodule.eks.aws_eks_access_policy_association.this["ci_cd_admin"]: Refreshing state... [id=project-bedrock-cluster#arn:aws:iam::125168806853:user/bedrock-ci#arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.5944681Z [0m[1mmodule.eks.aws_eks_access_policy_association.this["developer_viewer"]: Refreshing state... [id=project-bedrock-cluster#arn:aws:iam::125168806853:user/bedrock-dev-view#arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.9226595Z [0m[1mdata.aws_eks_cluster_auth.cluster: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.9232729Z [0m[1maws_eks_addon.cloudwatch_observability: Refreshing state... [id=project-bedrock-cluster:amazon-cloudwatch-observability][0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.9234096Z [0m[1mdata.aws_eks_cluster.cluster: Reading...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:26.9237815Z [0m[1mdata.aws_eks_cluster_auth.cluster: Read complete after 0s [id=project-bedrock-cluster][0m
+Terraform	Terraform Apply	2026-02-11T23:12:27.0799597Z [0m[1mdata.aws_eks_cluster.cluster: Read complete after 0s [id=project-bedrock-cluster][0m
+Terraform	Terraform Apply	2026-02-11T23:12:27.1408935Z [0m[1mhelm_release.aws_load_balancer_controller: Refreshing state... [id=aws-load-balancer-controller][0m
+Terraform	Terraform Apply	2026-02-11T23:12:27.7826578Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7827677Z Terraform used the selected providers to generate the following execution
+Terraform	Terraform Apply	2026-02-11T23:12:27.7828739Z plan. Resource actions are indicated with the following symbols:
+Terraform	Terraform Apply	2026-02-11T23:12:27.7829642Z   [32m+[0m create[0m
+Terraform	Terraform Apply	2026-02-11T23:12:27.7829836Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7829999Z Terraform will perform the following actions:
+Terraform	Terraform Apply	2026-02-11T23:12:27.7830290Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7830654Z [1m  # module.eks.aws_eks_access_entry.this["cluster_creator"][0m will be created
+Terraform	Terraform Apply	2026-02-11T23:12:27.7831315Z [0m  [32m+[0m[0m resource "aws_eks_access_entry" "this" {
+Terraform	Terraform Apply	2026-02-11T23:12:27.7831854Z       [32m+[0m[0m access_entry_arn  = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7832379Z       [32m+[0m[0m cluster_name      = "project-bedrock-cluster"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7832903Z       [32m+[0m[0m created_at        = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7833368Z       [32m+[0m[0m id                = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7833837Z       [32m+[0m[0m kubernetes_groups = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7834291Z       [32m+[0m[0m modified_at       = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7835145Z       [32m+[0m[0m principal_arn     = "arn:aws:iam::125168806853:user/bedrock-ci"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7835721Z       [32m+[0m[0m tags              = {
+Terraform	Terraform Apply	2026-02-11T23:12:27.7836087Z           [32m+[0m[0m "Project" = "Bedrock"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7836535Z         }
+Terraform	Terraform Apply	2026-02-11T23:12:27.7836800Z       [32m+[0m[0m tags_all          = {
+Terraform	Terraform Apply	2026-02-11T23:12:27.7837156Z           [32m+[0m[0m "Project" = "Bedrock"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7837458Z         }
+Terraform	Terraform Apply	2026-02-11T23:12:27.7837736Z       [32m+[0m[0m type              = "STANDARD"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7838164Z       [32m+[0m[0m user_name         = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7838501Z     }
+Terraform	Terraform Apply	2026-02-11T23:12:27.7838623Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7839047Z [1m  # module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"][0m will be created
+Terraform	Terraform Apply	2026-02-11T23:12:27.7839773Z [0m  [32m+[0m[0m resource "aws_eks_access_policy_association" "this" {
+Terraform	Terraform Apply	2026-02-11T23:12:27.7840282Z       [32m+[0m[0m associated_at = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7840745Z       [32m+[0m[0m cluster_name  = "project-bedrock-cluster"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7841198Z       [32m+[0m[0m id            = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7841612Z       [32m+[0m[0m modified_at   = (known after apply)
+Terraform	Terraform Apply	2026-02-11T23:12:27.7842285Z       [32m+[0m[0m policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7843031Z       [32m+[0m[0m principal_arn = "arn:aws:iam::125168806853:user/bedrock-ci"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7843369Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7843509Z       [32m+[0m[0m access_scope {
+Terraform	Terraform Apply	2026-02-11T23:12:27.7844226Z           [32m+[0m[0m type = "cluster"
+Terraform	Terraform Apply	2026-02-11T23:12:27.7844512Z         }
+Terraform	Terraform Apply	2026-02-11T23:12:27.7844712Z     }
+Terraform	Terraform Apply	2026-02-11T23:12:27.7844821Z 
+Terraform	Terraform Apply	2026-02-11T23:12:27.7845020Z [1mPlan:[0m [0m2 to add, 0 to change, 0 to destroy.
+Terraform	Terraform Apply	2026-02-11T23:12:28.5002591Z [0m[1mmodule.eks.aws_eks_access_entry.this["cluster_creator"]: Creating...[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8662181Z [31m╷[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8664861Z [31m│[0m [0m[1m[31mError: [0m[0m[1mcreating EKS Access Entry (project-bedrock-cluster:arn:aws:iam::125168806853:user/bedrock-ci): operation error EKS: CreateAccessEntry, https response error StatusCode: 409, RequestID: 4ef4c41e-e230-4339-bb54-345a243bb74d, ResourceInUseException: The specified access entry resource is already in use on this cluster.[0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8666952Z [31m│[0m [0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8667720Z [31m│[0m [0m[0m  with module.eks.aws_eks_access_entry.this["cluster_creator"],
+Terraform	Terraform Apply	2026-02-11T23:12:28.8668543Z [31m│[0m [0m  on .terraform/modules/eks/main.tf line 268, in resource "aws_eks_access_entry" "this":
+Terraform	Terraform Apply	2026-02-11T23:12:28.8669320Z [31m│[0m [0m 268: resource "aws_eks_access_entry" "this" [4m{[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8669759Z [31m│[0m [0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.8669996Z [31m╵[0m[0m
+Terraform	Terraform Apply	2026-02-11T23:12:28.9027208Z ##[error]Terraform exited with code 1.
+Terraform	Terraform Apply	2026-02-11T23:12:28.9058000Z ##[error]Process completed with exit code 1.
+Terraform	Post Checkout	﻿2026-02-11T23:12:28.9149495Z Post job cleanup.
+Terraform	Post Checkout	2026-02-11T23:12:29.0078675Z [command]/usr/bin/git version
+Terraform	Post Checkout	2026-02-11T23:12:29.0113486Z git version 2.52.0
+Terraform	Post Checkout	2026-02-11T23:12:29.0155720Z Temporarily overriding HOME='/home/runner/work/_temp/a0c906bf-141e-4681-921a-eff9e8d222b1' before making global git config changes
+Terraform	Post Checkout	2026-02-11T23:12:29.0156869Z Adding repository directory to the temporary git global config as a safe directory
+Terraform	Post Checkout	2026-02-11T23:12:29.0161474Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-bedrock/project-bedrock
+Terraform	Post Checkout	2026-02-11T23:12:29.0195632Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Terraform	Post Checkout	2026-02-11T23:12:29.0227264Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Terraform	Post Checkout	2026-02-11T23:12:29.0448729Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Terraform	Post Checkout	2026-02-11T23:12:29.0468373Z http.https://github.com/.extraheader
+Terraform	Post Checkout	2026-02-11T23:12:29.0480804Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Terraform	Post Checkout	2026-02-11T23:12:29.0510550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Terraform	Post Checkout	2026-02-11T23:12:29.0727148Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Terraform	Post Checkout	2026-02-11T23:12:29.0757087Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Terraform	Complete job	﻿2026-02-11T23:12:29.1074339Z Cleaning up orphan processes
