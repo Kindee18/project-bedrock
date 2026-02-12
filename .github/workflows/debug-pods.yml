@@ -21,10 +21,13 @@ jobs:
         run: aws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1
 
       - name: Get UI Logs
-        run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=100 || true
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=ui --tail=500 || true
 
       - name: Get Catalog Logs
         run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+
+      - name: Get Carts Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=carts --tail=100 || true
 
       - name: Get Orders Logs
         run: kubectl logs -n retail-app -l app.kubernetes.io/name=orders --tail=100 || true
