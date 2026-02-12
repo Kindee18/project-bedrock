@@ -31,5 +31,6 @@ __pycache__/
 selfsigned.crt
 k8s/ingress-current.yaml
 grading.json
-grading.json
-grading.json
+*.txt
+debug_*.txt
+
