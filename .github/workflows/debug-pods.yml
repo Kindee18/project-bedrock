@@ -20,5 +20,8 @@ jobs:
       - name: Update Kubeconfig
         run: aws eks update-kubeconfig --name project-bedrock-cluster --region us-east-1
 
-      - name: Restart Carts
-        run: kubectl delete pod -n retail-app -l app.kubernetes.io/name=carts
+      - name: Get Catalog Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=catalog --tail=100 || true
+
+      - name: Get Carts Logs
+        run: kubectl logs -n retail-app -l app.kubernetes.io/name=carts --tail=100 || true
