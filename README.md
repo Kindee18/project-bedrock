@@ -1,7 +1,7 @@
 # Project Bedrock: InnovateMart Retail Store on AWS EKS 🚀
 
 **Author:** Kindson (Cloud DevOps Engineer)  
-**Date:** 2026-02-08
+**Date:** 2026-02-12
 
 ## 📖 Project Overview
 This repository contains the complete Infrastructure as Code (Terraform) and Kubernetes manifests for **Project Bedrock**, a production-grade microservices deployment on AWS EKS. The project meets all core requirements and implements bonus objectives including **Managed RDS Persistence**, **Advanced Networking (ALB/TLS)**, and **Event-Driven Serverless** processing.
