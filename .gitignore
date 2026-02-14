@@ -34,3 +34,4 @@ k8s/ingress-current.yaml
 debug_*.txt
 
 k8s/values-rds.yaml
+test-image.jpg
