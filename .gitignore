@@ -33,3 +33,4 @@ k8s/ingress-current.yaml
 *.txt
 debug_*.txt
 
+k8s/values-rds.yaml

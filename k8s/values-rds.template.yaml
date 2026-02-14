@@ -41,3 +41,8 @@ ui:
       value: "http://my-retail-app-orders:80"
     - name: ENDPOINTS_ASSETS_URL
       value: "http://my-retail-app-assets:80"
+
+carts:
+  env:
+    - name: AWS_REGION
+      value: "us-east-1"
