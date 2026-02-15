@@ -74,7 +74,7 @@ To update the deployment:
 ## 🔗 Access & Verification
 
 ### 🌐 Store URL
-- **Standard (HTTP):** [http://k8s-retailap-myretail-41b4c633b8-774591857.us-east-1.elb.amazonaws.com](http://k8s-retailap-myretail-41b4c633b8-774591857.us-east-1.elb.amazonaws.com)
+- **Standard (HTTP):** [http://k8s-retailap-retailap-3c6aa53d7a-1168579136.us-east-1.elb.amazonaws.com](http://k8s-retailap-retailap-3c6aa53d7a-1168579136.us-east-1.elb.amazonaws.com)
 - **Secure (HTTPS/TLS):** [https://18-204-45-221.nip.io](https://18-204-45-221.nip.io)
   *(Note: Accepts self-signed certificate for grading purposes. Confirm IP matches ALB.)*
 
