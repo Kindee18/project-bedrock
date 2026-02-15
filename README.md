@@ -75,8 +75,8 @@ To update the deployment:
 
 ### 🌐 Store URL
 - **Standard (HTTP):** [http://k8s-retailap-retailap-3c6aa53d7a-1168579136.us-east-1.elb.amazonaws.com](http://k8s-retailap-retailap-3c6aa53d7a-1168579136.us-east-1.elb.amazonaws.com)
-- **Secure (HTTPS/TLS):** [https://18-204-45-221.nip.io](https://18-204-45-221.nip.io)
-  *(Note: Accepts self-signed certificate for grading purposes. Confirm IP matches ALB.)*
+- **Secure (HTTPS/TLS):** [https://54-172-1-43.nip.io](https://54-172-1-43.nip.io)
+  *(Note: ALB IPs are dynamic. If this link fails, resolve the ALB DNS to get a new IP and update the URL: `https://[IP-DASHED].nip.io`)*
 
 ### 🧪 Serverless Feature
 Upload an image to the S3 bucket:
