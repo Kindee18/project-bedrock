@@ -55,7 +55,13 @@ graph TD
 
 ### 1. Infrastructure Provisioning (Terraform)
 The infrastructure is managed via Terraform and automated with GitHub Actions.
-To deploy manually:
+
+**How to Trigger the Pipeline:**
+- **Pull Request**: Triggers `terraform plan` (Validation).
+- **Push to Main**: Triggers `terraform apply` (Deployment).
+- **Manual Trigger**: Go to GitHub Actions -> `Terraform Setup` -> `Run workflow`.
+
+To deploy manually (Local):
 ```bash
 cd terraform
 terraform init

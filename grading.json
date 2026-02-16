@@ -12,12 +12,12 @@
   "ci_access_key_id": {
     "sensitive": true,
     "type": "string",
-    "value": "AKIAR2JFENPCZMD4IHYY"
+    "value": "REDACTED"
   },
   "ci_secret_access_key": {
     "sensitive": true,
     "type": "string",
-    "value": "REDACTED_FOR_SECURITY_SUBMITTED_IN_DOC"
+    "value": "REDACTED"
   },
   "cluster_endpoint": {
     "sensitive": false,
@@ -32,12 +32,12 @@
   "dev_access_key_id": {
     "sensitive": true,
     "type": "string",
-    "value": "AKIAR2JFENPC7ZTKQ26O"
+    "value": "REDACTED"
   },
   "dev_secret_access_key": {
     "sensitive": true,
     "type": "string",
-    "value": "REDACTED_FOR_SECURITY_SUBMITTED_IN_DOC"
+    "value": "REDACTED"
   },
   "orders_db_endpoint": {
     "sensitive": false,
