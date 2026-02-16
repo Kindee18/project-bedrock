@@ -1,0 +1,37 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+lambda_function_payload.zip
+
+# Sensitive credentials
+*.pem
+*.key
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Logs
+*.log
+selfsigned.crt
+k8s/ingress-current.yaml
+*.txt
+debug_*.txt
+
+k8s/values-rds.yaml
+test-image.jpg

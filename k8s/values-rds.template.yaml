@@ -1,0 +1,48 @@
+
+catalog:
+  mysql:
+    create: false
+    endpoint: ${CATALOG_ENDPOINT}
+    secret:
+      create: true
+      username: adminuser
+      password: SuperSecretPass123!
+      name: catalog-db
+
+orders:
+  postgresql:
+    create: false
+    endpoint:
+      host: ${ORDERS_ENDPOINT}
+      port: "5432"
+    secret:
+      create: true
+      username: adminuser
+      password: SuperSecretPass123!
+      name: orders-db
+
+ui:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: alb
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+  service:
+    type: ClusterIP
+  env:
+    - name: ENDPOINTS_CATALOG_URL
+      value: "http://my-retail-app-catalog:80"
+    - name: ENDPOINTS_CARTS_URL
+      value: "http://my-retail-app-carts:80"
+    - name: ENDPOINTS_CHECKOUT_URL
+      value: "http://my-retail-app-checkout:80"
+    - name: ENDPOINTS_ORDERS_URL
+      value: "http://my-retail-app-orders:80"
+    - name: ENDPOINTS_ASSETS_URL
+      value: "http://my-retail-app-assets:80"
+
+carts:
+  env:
+    - name: AWS_REGION
+      value: "us-east-1"
