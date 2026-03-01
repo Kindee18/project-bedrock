@@ -68,8 +68,9 @@ jobs:
         cd ..
         envsubst < k8s/values-rds.template.yaml > k8s/values-rds.yaml
         
-        # Cleanup existing secrets to fix Helm ownership issues (one-time requirement usually, but safe to keep)
-        kubectl delete secret catalog-db orders-db -n retail-app --ignore-not-found
+        # Reset namespace to fix Helm ownership issues from previous manual deployments
+        kubectl delete namespace retail-app --ignore-not-found
+        kubectl create namespace retail-app
         
         # Deploy with Helm
         helm upgrade --install my-retail-app oci://public.ecr.aws/aws-containers/retail-store-sample-chart \
