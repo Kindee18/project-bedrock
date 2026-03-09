@@ -31,16 +31,25 @@ ui:
   service:
     type: ClusterIP
   env:
-    - name: ENDPOINTS_CATALOG_URL
+    - name: ENDPOINTS_CATALOG
       value: "http://my-retail-app-catalog:80"
-    - name: ENDPOINTS_CARTS_URL
+    - name: ENDPOINTS_CARTS
       value: "http://my-retail-app-carts:80"
-    - name: ENDPOINTS_CHECKOUT_URL
+    - name: ENDPOINTS_CHECKOUT
       value: "http://my-retail-app-checkout:80"
-    - name: ENDPOINTS_ORDERS_URL
+    - name: ENDPOINTS_ORDERS
       value: "http://my-retail-app-orders:80"
-    - name: ENDPOINTS_ASSETS_URL
+    - name: ENDPOINTS_ASSETS
       value: "http://my-retail-app-assets:80"
+    # Legacy/compatibility names
+    - name: RETAIL_UI_ENDPOINTS_CATALOG
+      value: "http://my-retail-app-catalog:80"
+    - name: RETAIL_UI_ENDPOINTS_CARTS
+      value: "http://my-retail-app-carts:80"
+    - name: RETAIL_UI_ENDPOINTS_CHECKOUT
+      value: "http://my-retail-app-checkout:80"
+    - name: RETAIL_UI_ENDPOINTS_ORDERS
+      value: "http://my-retail-app-orders:80"
 
 carts:
   env:
