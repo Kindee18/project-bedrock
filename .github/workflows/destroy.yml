@@ -68,6 +68,15 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Protect Management Credentials (Remove from state)
+      run: |
+        terraform state rm aws_iam_user.bedrock_ci || true
+        terraform state rm aws_iam_access_key.bedrock_ci || true
+        terraform state rm aws_iam_user_policy_attachment.ci_admin || true
+        terraform state rm aws_iam_user.bedrock_dev_view || true
+        terraform state rm aws_iam_access_key.bedrock_dev_view || true
+        terraform state rm aws_iam_user_policy_attachment.readonly || true
+
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
       env:
