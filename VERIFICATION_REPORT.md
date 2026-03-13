@@ -189,4 +189,20 @@ Duration: 15.64 ms | Memory Used: 37 MB
 - ✅ Application accessible via HTTPS
 - ✅ Grading credentials available
 
-**No issues found. Ready to submit immediately.**
+
+---
+
+## ♻️ Infrastructure Deconstruction (Post-Verification)
+
+Following the successful verification of all project requirements, the infrastructure was retired to maintain a clean environment and avoid unnecessary costs.
+
+### 🏁 Final State Audit Summary
+- ✅ **VPC & Networking:** All Bedrock-specific networking resources (VPC, subnets, NAT-GW) successfully removed.
+- ✅ **Compute & Apps:** EKS cluster and all node groups deprovisioned. All Helm releases uninstalled.
+- ✅ **Persistence:** RDS instances (`catalog`, `orders`) and DynamoDB `Items` table deleted.
+- ✅ **Storage:** S3 asset buckets emptied and removed.
+- ✅ **CI/CD:** Dedicated `destroy.yml` workflow fixed and successfully executed.
+
+**Current AWS State:** All project resources have been safely destroyed. The documentation remains as a historical record of the successful deployment.
+
+---
